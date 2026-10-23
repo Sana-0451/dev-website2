@@ -136,7 +136,7 @@ sequenceDiagram
   end
   P->>V: 申請地址（15 分鐘）
   U->>V: 轉幣
-  V->>P: 回調（驗簽、冪等）
+  V->>P: 回調（驗簽、防重複）
   alt 訂單有效
     P->>C: 更新訂單並上分
   else 已過期或找不到訂單
@@ -189,11 +189,11 @@ stateDiagram-v2
 <section>
 <h2><span class="n">06</span>寫進需求的防資損規則</h2>
 <ul>
-<li><strong>冪等</strong>：同一筆回調無論到達幾次，只處理一次；帳變流水對訂單號加唯一約束。</li>
+<li><strong>防重複</strong>：同一筆回調無論到達幾次，只處理一次；帳變流水對訂單號加唯一約束。</li>
 <li><strong>驗簽</strong>：回調先驗證簽章與來源，驗簽失敗只記錄，不改訂單。</li>
 <li><strong>單向流轉</strong>：成功、失敗、已取消是終態，不可回退。</li>
 <li><strong>快照</strong>：手續費與匯率在建單時寫入訂單，之後入帳、對帳都以快照為準。</li>
-<li><strong>人工補單</strong>：雙人覆核，綁定鏈上交易雜湊值，一筆交易只能用一次。</li>
+<li><strong>人工補單</strong>：雙人覆核，鏈上交易編號（TxID），一筆交易只能用一次。</li>
 <li><strong>可測試</strong>：UAT 提供「模擬支付商」，QA 可自行觸發成功、失敗、重複、延遲、少付、多付。</li>
 </ul>
 </section>
@@ -203,7 +203,7 @@ stateDiagram-v2
 <p>能在文件內定案的我直接定案；涉及業務數值的，只給規則與預設做法，不替業務編數字。</p>
 <div class="tw"><table>
 <tr><th>優先級</th><th>內容</th></tr>
-<tr><td><span class="tag t-bad">P0 上線前</span></td><td>狀態機與冪等、回調驗簽、出金預扣交易、每日對帳、補單雙人覆核</td></tr>
+<tr><td><span class="tag t-bad">P0 上線前</span></td><td>狀態機與防重複、回調驗簽、出金預扣交易、每日對帳、補單雙人覆核</td></tr>
 <tr><td><span class="tag t-warn">P1 上線後</span></td><td>手續費與匯率規則落地、回調模擬工具、監控警示、審核 SLA</td></tr>
 <tr><td><span class="tag t-ok">P2 持續</span></td><td>信用卡管道與拒付流程、多管道路由降級、營運看板</td></tr>
 </table></div>
