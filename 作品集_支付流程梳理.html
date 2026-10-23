@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>支付流程梳理案例</title>
+<style>
+:root{
+  --bg:#f7f7f5;--card:#fff;--text:#1f2328;--muted:#5d6670;--line:#e3e3df;
+  --accent:#2f6fde;--accent-soft:#e8f0fd;--warn:#b7791f;--warn-soft:#fdf3e1;
+  --ok:#2e7d4f;--ok-soft:#e5f4ea;--bad:#b42318;--bad-soft:#fdecea;--code:#f0f0ec;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16181b;--card:#1e2125;--text:#e6e8ea;--muted:#9aa3ad;--line:#30353b;
+    --accent:#6ea0ff;--accent-soft:#1f2b40;--warn:#e0a84a;--warn-soft:#3a2f1c;
+    --ok:#5cc28a;--ok-soft:#1b3326;--bad:#f07a6e;--bad-soft:#3d1f1c;--code:#2a2e33;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:15.5px/1.75 -apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei","Noto Sans CJK TC",sans-serif}
+main{max-width:920px;margin:0 auto;padding:48px 24px 80px}
+.eyebrow{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.08em}
+h1{font-size:30px;line-height:1.35;margin:8px 0 14px}
+.lead{font-size:16.5px;color:var(--muted);margin:0 0 24px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px}
+.fact b{display:block;font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:24px 0 8px}
+.stat{background:var(--accent-soft);border-radius:10px;padding:14px 16px}
+.stat .num{font-size:28px;font-weight:800;color:var(--accent);line-height:1.2}
+.stat .lb{font-size:13.5px;color:var(--text)}
+section{margin-top:44px}
+h2{font-size:22px;margin:0 0 14px}
+h2 .n{color:var(--accent);margin-right:10px;font-variant-numeric:tabular-nums}
+p{margin:8px 0}
+ul{padding-left:22px}li{margin:4px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.card h4{margin:0 0 6px;font-size:15.5px}
+.card .row{font-size:14px;margin:6px 0}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:0 8px;border-radius:999px;margin-right:6px}
+.t-bad{background:var(--bad-soft);color:var(--bad)}
+.t-ok{background:var(--ok-soft);color:var(--ok)}
+.t-warn{background:var(--warn-soft);color:var(--warn)}
+.diagram{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0;overflow-x:auto}
+.cap{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:6px}
+.note{background:var(--warn-soft);border-radius:10px;padding:12px 16px;font-size:14.5px;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--code);white-space:nowrap}
+.tw{overflow-x:auto;margin:12px 0}
+.takeaway{border-left:4px solid var(--accent);background:var(--card);border-radius:0 10px 10px 0;padding:14px 18px;margin-top:14px}
+footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
+@media (max-width:760px){
+  main{padding:28px 16px 60px}
+  h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+<main>
+
+<div class="eyebrow">產品案例 · 支付系統規格設計</div>
+<h1>從零整理一套支付系統，交給開發與 QA 直接開工</h1>
+<p class="lead">一個支援加密貨幣出入金的平台要上線支付服務。我負責把整套系統梳理清楚：寫架構說明、出前台設計稿、畫時序圖，讓開發知道怎麼做、QA 知道怎麼測，並設計後台異常訂單的人工處理機制；交付前再複盤一輪，把容易出金流問題的細節補強。</p>
+
+<div class="facts">
+  <div class="fact"><b>角色</b>產品經理（獨立負責規格產出）</div>
+  <div class="fact"><b>範圍</b>入金、出金、訂單狀態、異常處理</div>
+  <div class="fact"><b>交付對象</b>開發、QA，並與風控、支付商確認規則</div>
+  <div class="fact"><b>產出</b>架構說明、前台設計稿、時序圖、測試要點</div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num">3</div><div class="lb">個系統角色串成完整鏈路</div></div>
+  <div class="stat"><div class="num">2</div><div class="lb">條主流程（入金、出金）</div></div>
+  <div class="stat"><div class="num">4</div><div class="lb">種異常訂單處理操作，涵蓋遲到款與漏通知</div></div>
+</div>
+
+<section>
+<h2><span class="n">01</span>背景</h2>
+<p>系統分三層：<strong>平台業務系統</strong>（前台、帳務、審核）→ <strong>支付中台</strong>（統一介面、串接多家支付商）→ <strong>第三方支付商</strong>（實際收付款）。入金以 USDT 為主，訂單有效期 15 分鐘；出金需預扣餘額，可選擇人工審核。</p>
+<p>支付流程橫跨三個系統、牽涉真實資金，任何一個模糊點上線後都可能變成「錢收了、分沒上」或「錢出了兩次」。所以開發和 QA 需要的不只是一張流程圖，而是一整套講得清楚、彼此對得上的規格。</p>
+</section>
+
+<section>
+<h2><span class="n">02</span>我交付了什麼</h2>
+<div class="cards">
+  <div class="card"><h4>架構說明文件</h4>
+    <div class="row">三層系統的職責劃分、訂單編號規則（TD／TW／PD／PW）、入金與出金業務規則。</div></div>
+  <div class="card"><h4>前台設計稿</h4>
+    <div class="row">錢包頁、入金方式選擇、金額確認頁：JPY 與 USDT 雙向換算、匯率與手續費顯示、網路選擇。</div></div>
+  <div class="card"><h4>時序圖</h4>
+    <div class="row">充值與提款兩條 TimeFlow，標出玩家、支付中台、支付商、業務系統之間每一步的呼叫與回傳，包括審核分支。</div></div>
+  <div class="card"><h4>後台異常訂單列表</h4>
+    <div class="row">支付商回調找不到對應訂單時（例如超過 15 分鐘才付款），自動進入列表，由人員核對後補單、退款或忽略；支付商漏通知時也能在此手動補單。</div></div>
+  <div class="card"><h4>QA 測試要點</h4>
+    <div class="row">Happy case 路徑、入金與出金檢查項，以及回調逾時、重複回調、未匹配、審核拒絕等異常情境。</div></div>
+</div>
+</section>
+
+<section>
+<h2><span class="n">03</span>交付前複盤：進一步補強的地方</h2>
+<p>文件完成後，我從「上線後哪裡可能出金流問題」的角度再檢查一遍，補強了以下幾點：</p>
+<div class="cards">
+  <div class="card"><h4>逾期與失敗分開</h4>
+    <div class="row"><span class="tag t-warn">考量</span>玩家第 16 分鐘才付款，如果訂單顯示「失敗」，玩家會以為錢不見了。</div>
+    <div class="row"><span class="tag t-ok">做法</span>新增「已過期」狀態，與支付商拒絕的「失敗」區分；遲到款項進入異常訂單列表，不自動入帳。</div></div>
+  <div class="card"><h4>狀態機細化</h4>
+    <div class="row"><span class="tag t-warn">考量</span>鏈上確認中、少付或多付、出款逾時，各自需要不同的處理方式。</div>
+    <div class="row"><span class="tag t-ok">做法</span>補上「待確認」「金額不符」「出款未知」；前台統一顯示「處理中」，後台顯示完整狀態。</div></div>
+  <div class="card"><h4>異常列表加上自動保底</h4>
+    <div class="row"><span class="tag t-warn">考量</span>異常訂單由人工處理是合理的，但支付商漏通知時，要等人發現才會進列表。</div>
+    <div class="row"><span class="tag t-ok">做法</span>加上定時查詢卡單與 T+1 每日對帳，差異自動進入異常列表並發出警示。</div></div>
+  <div class="card"><h4>手續費與匯率寫入訂單</h4>
+    <div class="row"><span class="tag t-warn">考量</span>匯率每天更新、手續費由廠商設定，數值可能在訂單進行中變動。</div>
+    <div class="row"><span class="tag t-ok">做法</span>建單時把匯率與手續費以快照寫入訂單，入帳與對帳都以快照為準。</div></div>
+</div>
+</section>
+
+<section>
+<h2><span class="n">04</span>關鍵設計：入金流程與異常處理</h2>
+<p>入金採用「先建單、後付款」：玩家申請時就建好訂單，支付商回調只更新訂單。回調找不到訂單時，進入後台異常訂單列表交由人工處理。</p>
+<div class="diagram"><div class="cap">入金流程</div>
+<pre class="mermaid">
+sequenceDiagram
+  actor U as 玩家
+  participant P as 支付中台
+  participant V as 支付商
+  participant C as 業務系統
+  U->>P: 申請充值（鎖定匯率）
+  rect rgba(47,111,222,0.15)
+  P->>C: 建單（處理中）
+  end
+  P->>V: 申請地址（15 分鐘）
+  U->>V: 轉幣
+  V->>P: 回調（驗簽、冪等）
+  alt 訂單有效
+    P->>C: 更新訂單並上分
+  else 已過期或找不到訂單
+    P->>C: 進入異常訂單列表
+  end
+</pre></div>
+<div class="tw"><table>
+<tr><th>異常列表操作</th><th>說明</th></tr>
+<tr><td>待處理</td><td>已收到通知，等待人員核對</td></tr>
+<tr><td>補單</td><td>確認資金到帳後補單，可同步消除該玩家的錯誤訂單</td></tr>
+<tr><td>退款</td><td>確認情況並退回款項後更新進度</td></tr>
+<tr><td>忽略</td><td>確認為無效通知</td></tr>
+</table></div>
+<div class="takeaway">每一筆進來的錢都有去處：有訂單就更新訂單，沒有訂單就進異常列表，不會悄悄消失。</div>
+</section>
+
+<section>
+<h2><span class="n">05</span>關鍵設計：訂單狀態機</h2>
+<p>狀態機讓開發、QA、客服對「這張單現在是什麼狀況」有同一套語言。黃色節點都不允許系統自動處理，必須查詢或人工確認。</p>
+<div class="diagram"><div class="cap">入金狀態機</div>
+<pre class="mermaid">
+stateDiagram-v2
+  direction LR
+  state "已建立" as created
+  state "已提交" as submitted
+  state "待確認" as confirming
+  state "成功" as success
+  state "失敗" as failed
+  state "已過期" as expired
+  state "金額不符" as mismatch
+  state "未匹配" as unmatched
+  [*] --> created
+  created --> submitted
+  submitted --> confirming: 收到鏈上交易
+  confirming --> success
+  submitted --> failed: 支付商拒絕
+  submitted --> expired: 15 分鐘未付
+  confirming --> mismatch: 少付或多付
+  expired --> unmatched: 遲到款
+  mismatch --> success: 人工處理
+  unmatched --> success: 人工補單
+  success --> [*]
+  failed --> [*]
+  classDef manual fill:#fdf3e1,stroke:#b7791f,color:#5a3d0c
+  class mismatch, unmatched manual
+</pre></div>
+<p>出金同理：預扣餘額與建單放在同一個資料庫交易（transaction）裡；支付商逾時沒有回應時進入「出款未知」，<strong>先查詢再決定</strong>，絕不直接退款，避免重複出款。</p>
+</section>
+
+<section>
+<h2><span class="n">06</span>寫進需求的防資損規則</h2>
+<ul>
+<li><strong>冪等</strong>：同一筆回調無論到達幾次，只處理一次；帳變流水對訂單號加唯一約束。</li>
+<li><strong>驗簽</strong>：回調先驗證簽章與來源，驗簽失敗只記錄，不改訂單。</li>
+<li><strong>單向流轉</strong>：成功、失敗、已取消是終態，不可回退。</li>
+<li><strong>快照</strong>：手續費與匯率在建單時寫入訂單，之後入帳、對帳都以快照為準。</li>
+<li><strong>人工補單</strong>：雙人覆核，綁定鏈上交易雜湊值，一筆交易只能用一次。</li>
+<li><strong>可測試</strong>：UAT 提供「模擬支付商」，QA 可自行觸發成功、失敗、重複、延遲、少付、多付。</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="n">07</span>收尾：分清楚誰該決定什麼</h2>
+<p>能在文件內定案的我直接定案；涉及業務數值的，只給規則與預設做法，不替業務編數字。</p>
+<div class="tw"><table>
+<tr><th>優先級</th><th>內容</th></tr>
+<tr><td><span class="tag t-bad">P0 上線前</span></td><td>狀態機與冪等、回調驗簽、出金預扣交易、每日對帳、補單雙人覆核</td></tr>
+<tr><td><span class="tag t-warn">P1 上線後</span></td><td>手續費與匯率規則落地、回調模擬工具、監控警示、審核 SLA</td></tr>
+<tr><td><span class="tag t-ok">P2 持續</span></td><td>信用卡管道與拒付流程、多管道路由降級、營運看板</td></tr>
+</table></div>
+<div class="note">留給業務拍板：入金審核門檻、單筆與每日限額、匯率是否加價、第二家支付商的出金是否開通。</div>
+</section>
+
+<footer>本案例已隱去公司、產品與支付商名稱，流程與數字僅保留說明所需的部分。</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+try{
+  var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+  mermaid.initialize({startOnLoad:true,theme:dark?'dark':'neutral',
+    fontFamily:'-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif'});
+}catch(e){}
+</script>
+</body>
+</html>
