@@ -884,7 +884,7 @@
                 
                 <div class="search-additional-rows">
                     <div class="search-item">
-                        <label class="search-label">所屬代理:</label>
+                        <label class="search-label">所屬部門:</label>
                         <select id="agent" class="search-select">
                             <option value="">  </option>
                             <option value="ivLv4UAT">ivLv4UAT</option>
@@ -894,7 +894,7 @@
                     </div>
                     
                     <div class="search-item">
-                        <label class="search-label">玩家帳號:</label>
+                        <label class="search-label">使用者帳號:</label>
                         <input type="text" id="playerAccount" class="search-input" placeholder=" ">
                     </div>
                     
@@ -958,7 +958,7 @@
                     <thead>
                         <tr>
                             <th>後台單號</th>
-                            <th>玩家帳號</th>
+                            <th>使用者帳號</th>
                             <th>支付種類</th>
                             <th>支付方式</th>
                             <th>支付渠道</th>
@@ -1160,7 +1160,7 @@
                             <tr>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">資料來源</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
-                                    支付審核列表的資料為每一筆玩家申請的金流交易訂單。<br>
+                                    支付審核列表的資料為每一筆使用者申請的金流交易訂單。<br>
                                     僅顯示處理中和待處理的訂單,完成後訂單一律顯示在金流支付報表,不在此頁。<br>
                                     所有資料皆為即時更新,確保資訊準確性。
                                 </td>
@@ -1175,9 +1175,9 @@
                             <tr>
                                 <td style="padding: 12px 16px; color: #666; font-weight: 500; text-align: center; vertical-align: top;">資料權限</td>
                                 <td style="padding: 12px 16px; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
-                                    使用者僅能查看自己所屬代理及其下級代理的支付資料。<br>
+                                    使用者僅能查看自己所屬部門及其下級部門的支付資料。<br>
                                     特定人員,如超級管理員、風控人員等可審核該頁面的訂單。<br>
-                                    部分人員,如代理、客服等可查看所有代理底下玩家的申請記錄,但不可審核。
+                                    部分人員,如財務、客服等可查看所有部門底下使用者的申請記錄,但不可審核。
                                 </td>
                             </tr>
                         </tbody>
@@ -1209,7 +1209,7 @@
                                     點擊可選擇查詢的時間維度<br>
                                     <strong style="color: #ba6cf5;">預設為創建時間</strong><br>
                                     下拉選單: 創建時間、更新時間<br>
-                                    • 創建時間: 玩家發起支付申請的時間<br>
+                                    • 創建時間: 使用者發起支付申請的時間<br>
                                     • 更新時間: 支付訂單最後一次狀態變更的時間
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">下拉選單,必填</td>
@@ -1254,22 +1254,22 @@
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">下拉選單,非必填</td>
                             </tr>
                             <tr>
-                                <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">所屬代理</td>
+                                <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">所屬部門</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
-                                    點擊選擇所屬代理<br>
-                                    預設空值,代表查詢全部代理<br>
-                                    所選代理的資料一定包含下級代理數據<br>
-                                    僅顯示當前用戶有權限查看的代理列表
+                                    點擊選擇所屬部門<br>
+                                    預設空值,代表查詢全部部門<br>
+                                    所選部門的資料一定包含下級部門數據<br>
+                                    僅顯示當前用戶有權限查看的部門列表
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">下拉選單,非必填</td>
                             </tr>
                             <tr>
-                                <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">玩家帳號</td>
+                                <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">使用者帳號</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
-                                    點擊輸入玩家帳號進行查詢<br>
-                                    預設空值,代表查詢全部玩家<br>
+                                    點擊輸入使用者帳號進行查詢<br>
+                                    預設空值,代表查詢全部使用者<br>
                                     支持完整賬號或部分賬號搜尋<br>
-                                    可快速定位特定玩家的所有支付記錄
+                                    可快速定位特定使用者的所有支付記錄
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">輸入框,非必填</td>
                             </tr>
@@ -1299,8 +1299,8 @@
                                     點擊選擇支付種類<br>
                                     預設空值,代表查詢全部種類<br>
                                     下拉選單: 充值、提款<br>
-                                    • 充值: 玩家存入資金到遊戲帳戶<br>
-                                    • 提款: 玩家從遊戲帳戶提取資金
+                                    • 充值: 使用者存入資金到遊戲帳戶<br>
+                                    • 提款: 使用者從遊戲帳戶提取資金
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">下拉選單,非必填</td>
                             </tr>
@@ -1449,23 +1449,23 @@
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">藍色連結+複製功能</td>
                             </tr>
                             <tr>
-                                <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">玩家帳號</td>
-                                <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">顯示發起支付申請的玩家帳號</td>
+                                <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">使用者帳號</td>
+                                <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">顯示發起支付申請的使用者帳號</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">文字顯示</td>
                             </tr>
                             <tr>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">支付種類</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
                                     顯示該筆交易的類型<br>
-                                    • 充值(綠色標籤): 玩家存入資金<br>
-                                    • 提款(橙色標籤): 玩家提取資金
+                                    • 充值(綠色標籤): 使用者存入資金<br>
+                                    • 提款(橙色標籤): 使用者提取資金
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">彩色標籤</td>
                             </tr>
                             <tr>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">支付方式</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
-                                    顯示玩家選擇的支付方式<br>
+                                    顯示使用者選擇的支付方式<br>
                                     包括: 銀行轉賬、信用卡、虛擬貨幣、現金等
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">文字顯示</td>
@@ -1523,7 +1523,7 @@
                             <tr>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">創建時間</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
-                                    顯示玩家發起支付訂單的時間<br>
+                                    顯示使用者發起支付訂單的時間<br>
                                     格式: YYYY-MM-DD HH:mm:ss
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">時間格式,可排序</td>
@@ -1587,16 +1587,16 @@
                                     • 後台單號: 系統內部唯一識別碼,可複製<br>
                                     • 支付單號: 支付系統的訂單編號,可複製<br>
                                     • 三方單號: 第三方支付平台的訂單編號,可複製（無提供可略）<br>
-                                    • 玩家帳號: 發起支付的玩家帳號<br>
-                                    • 所屬代理: 該玩家所屬的代理商<br>
-                                    • 收款錢包: 該玩家收款的錢包位置,可複製（無提供可略）
+                                    • 使用者帳號: 發起支付的使用者帳號<br>
+                                    • 所屬部門: 該使用者所屬的部門<br>
+                                    • 收款錢包: 該使用者收款的錢包位置,可複製（無提供可略）
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">ID快速複製</td>
                             </tr>
                             <tr>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">時間資訊</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
-                                    • 申請時間: 玩家發起支付申請的時間<br>
+                                    • 申請時間: 使用者發起支付申請的時間<br>
                                     • 更新時間: 訂單最後一次狀態變更的時間<br>
                                     • 審核人: 處理該訂單的人員或系統
                                 </td>
@@ -1607,9 +1607,9 @@
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
                                     • 支付方式: 銀行轉賬/信用卡/虛擬貨幣等<br>
                                     • 支付渠道: 處理該筆交易的第三方平台<br>
-                                    • 付款錢包: 玩家付款的錢包位置/銀行帳號/銀行卡號,可複製（無提供可略）<br>
-                                    • 來源金額: 玩家申請的原始金額及幣種<br>
-                                    • 匯率: 玩家申請當下,幣種轉換的匯率<br>                                 
+                                    • 付款錢包: 使用者付款的錢包位置/銀行帳號/銀行卡號,可複製（無提供可略）<br>
+                                    • 來源金額: 使用者申請的原始金額及幣種<br>
+                                    • 匯率: 使用者申請當下,幣種轉換的匯率<br>                                 
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">完整支付申請的資訊</td>
                             </tr>
@@ -1617,7 +1617,7 @@
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; font-weight: 500; text-align: center; vertical-align: top;">支付資訊</td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: left; line-height: 1.6; vertical-align: top;">
                                     • 訂單金額: 該筆訂單最終成交的金額和幣種<br>
-                                    • 手續費: 玩家申請當下,預估的手續費及幣種<br>
+                                    • 手續費: 使用者申請當下,預估的手續費及幣種<br>
                                     • 轉換JPY: 扣除手續費後實際轉入/轉出的平台金額(JPY)
                                 </td>
                                 <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #666; text-align: center; vertical-align: top;">最終支付結算資訊</td>
@@ -1628,7 +1628,7 @@
                                     • 同意申請: 二次確認是否同意,同意後,訂單會進入處理中狀態<br>
                                     • 拒絕申請: 需輸入拒絕原因,才可拒絕該訂單<br>
                                     • 同步訂單狀態: 重新向支付通道查詢此訂單的最新狀態，需已審核過的訂單才會出現<br>
-                                    • 玩家審核: 跳轉至支付系統>風控審核頁面,並帶入當前的時間搜索條件
+                                    • 使用者審核: 跳轉至支付系統>風控審核頁面,並帶入當前的時間搜索條件
                                 </td>
                                 <td style="padding: 12px 16px; color: #666; text-align: center; vertical-align: top;">按鈕</td>
                             </tr>
@@ -1697,11 +1697,11 @@
                                 </div>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">玩家帳號:</span>
+                                <span class="info-label">使用者帳號:</span>
                                 <span class="info-value" id="playerName">testnorman</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">所屬代理:</span>
+                                <span class="info-label">所屬部門:</span>
                                 <span class="info-value" id="agentName">ivLv4UAT</span>
                             </div>
                             <div class="info-item">
@@ -1795,7 +1795,7 @@
             <div class="modal-footer">
                 <button class="btn btn-approve" style="min-width: 120px; padding: 10px 24px;" onclick="approvePaymentFromModal()">同意申請</button>
                 <button class="btn btn-reject" style="min-width: 120px; padding: 10px 24px;" onclick="rejectPaymentFromModal()">拒絕申請</button>
-                <button class="btn btn-secondary" style="min-width: 120px; padding: 10px 24px;" onclick="viewPlayerDetails()">玩家審核</button>
+                <button class="btn btn-secondary" style="min-width: 120px; padding: 10px 24px;" onclick="viewPlayerDetails()">使用者審核</button>
             </div>
         </div>
     </div>
@@ -1814,7 +1814,7 @@
                         <td style="padding: 10px 0; color: #333; text-align: right; font-weight: 500;" id="syncSystemId">-</td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px 0; color: #999; border-top: 1px solid #f0f0f0;">玩家帳號:</td>
+                        <td style="padding: 10px 0; color: #999; border-top: 1px solid #f0f0f0;">使用者帳號:</td>
                         <td style="padding: 10px 0; color: #333; text-align: right; font-weight: 500; border-top: 1px solid #f0f0f0;" id="syncPlayerName">-</td>
                     </tr>
                     <tr>
@@ -1867,7 +1867,7 @@
         // 欄位配置
         const defaultColumns = [
             { id: 'id', name: '後台單號', visible: true, pinned: null, locked: true },
-            { id: 'player', name: '玩家帳號', visible: true, pinned: null },
+            { id: 'player', name: '使用者帳號', visible: true, pinned: null },
             { id: 'type', name: '支付種類', visible: true, pinned: null },
             { id: 'method', name: '支付方式', visible: true, pinned: null },
             { id: 'channel', name: '支付渠道', visible: true, pinned: null },
@@ -2320,7 +2320,7 @@
 
         function viewPlayerDetails() {
             const playerName = document.getElementById('modalPlayerName').textContent;
-            showNotification(`正在開啟玩家 ${playerName} 的審核頁面...`, 'success');
+            showNotification(`正在開啟使用者 ${playerName} 的審核頁面...`, 'success');
         }
 
         document.addEventListener('click', function(e) {
