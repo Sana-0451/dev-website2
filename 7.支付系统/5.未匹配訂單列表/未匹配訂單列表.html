@@ -744,7 +744,7 @@
                 
                 <div class="search-additional-rows">
                     <div class="search-item">
-                        <label class="search-label">玩家賬號:</label>
+                        <label class="search-label">使用者賬號:</label>
                         <input type="text" class="search-input">
                     </div>
                     <div class="search-item">
@@ -759,7 +759,7 @@
                         <label class="search-label">支付渠道:</label>
                         <select class="search-select">
                             <option value=""></option>
-                            <option value="MatchPlay">MatchPlay</option>
+                            <option value="payment1">payment1</option>
                         </select>
                     </div>
                     <div class="search-item">
@@ -796,7 +796,7 @@
                     <thead>
                         <tr>
                             <th data-col="order-id">三方訂單號</th>
-                            <th data-col="player-account">玩家賬號</th>
+                            <th data-col="player-account">使用者賬號</th>
                             <th data-col="payment-type">支付種類</th>
                             <th data-col="payment-method">支付方式</th>
                             <th data-col="payment-channel">支付渠道</th>
@@ -843,7 +843,7 @@
                             <td data-col="player-account">testnorman</td>
                             <td data-col="payment-type"><span class="payment-type withdraw">提款</span></td>
                             <td data-col="payment-method">銀行轉賬</td>
-                            <td data-col="payment-channel">GoldAnt</td>
+                            <td data-col="payment-channel">payment2</td>
                             <td data-col="currency">USD</td>
                             <td data-col="amount" class="amount">20.00</td>
                             <td data-col="status"><span class="status-tag status-pending">待處理</span></td>
@@ -866,7 +866,7 @@
                             <td data-col="player-account">Zombie01A03</td>
                             <td data-col="payment-type"><span class="payment-type withdraw">提款</span></td>
                             <td data-col="payment-method">銀行轉賬</td>
-                            <td data-col="payment-channel">MatchPlay</td>
+                            <td data-col="payment-channel">payment1</td>
                             <td data-col="currency">JPY</td>
                             <td data-col="amount" class="amount">15,000.00</td>
                             <td data-col="status"><span class="status-tag status-completed">已補單</span></td>
@@ -1008,12 +1008,12 @@
                             </tr>
                             <tr>
                                 <td>狀態</td>
-                                <td>點擊可選擇不同支付狀態進行查詢<br>預設空值,代表查詢全部<br>下拉選單: 待處理、已補單、已退款、已忽略<br>• 待處理: 接收到支付通知,待人工確認處理<br>• 已補單: 已確認並完成補單操作,資金已到帳<br>• 已退款: 已確認並退回款項給玩家<br>• 已忽略: 確認為無效通知,已標記為忽略</td>
+                                <td>點擊可選擇不同支付狀態進行查詢<br>預設空值,代表查詢全部<br>下拉選單: 待處理、已補單、已退款、已忽略<br>• 待處理: 接收到支付通知,待人工確認處理<br>• 已補單: 已確認並完成補單操作,資金已到帳<br>• 已退款: 已確認並退回款項給使用者<br>• 已忽略: 確認為無效通知,已標記為忽略</td>
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
-                                <td>玩家賬號</td>
-                                <td>點擊輸入玩家賬號進行精確查詢<br>預設空值,代表查詢全部玩家</td>
+                                <td>使用者賬號</td>
+                                <td>點擊輸入使用者賬號進行精確查詢<br>預設空值,代表查詢全部使用者</td>
                                 <td>輸入框,非必填</td>
                             </tr>
                             <tr>
@@ -1023,12 +1023,12 @@
                             </tr>
                             <tr>
                                 <td>支付渠道</td>
-                                <td>點擊選擇支付渠道<br>預設空值,代表查詢全部渠道<br>下拉選單: MatchPlay、GoldAnt、8v、線下<br>每個渠道對應不同的第三方支付廠商</td>
+                                <td>點擊選擇支付渠道<br>預設空值,代表查詢全部渠道<br>下拉選單: payment1、payment2、payment3、線下<br>每個渠道對應不同的第三方支付廠商</td>
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
                                 <td>支付種類</td>
-                                <td>點擊選擇支付種類<br>預設空值,代表查詢全部種類<br>下拉選單: 充值、提款<br>• 充值: 玩家存入資金到遊戲帳戶<br>• 提款: 玩家從遊戲帳戶提取資金</td>
+                                <td>點擊選擇支付種類<br>預設空值,代表查詢全部種類<br>下拉選單: 充值、提款<br>• 充值: 使用者存入資金到遊戲帳戶<br>• 提款: 使用者從遊戲帳戶提取資金</td>
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
@@ -1074,18 +1074,18 @@
                                 <td>藍色連結+複製功能</td>
                             </tr>
                             <tr>
-                                <td>玩家賬號</td>
-                                <td>顯示發起支付申請的玩家帳號</td>
+                                <td>使用者賬號</td>
+                                <td>顯示發起支付申請的使用者帳號</td>
                                 <td>文字顯示</td>
                             </tr>
                             <tr>
                                 <td>支付種類</td>
-                                <td>顯示該筆交易的類型<br>• 充值(綠色標籤): 玩家存入資金<br>• 提款(橙色標籤): 玩家提取資金</td>
+                                <td>顯示該筆交易的類型<br>• 充值(綠色標籤): 使用者存入資金<br>• 提款(橙色標籤): 使用者提取資金</td>
                                 <td>彩色標籤</td>
                             </tr>
                             <tr>
                                 <td>支付方式</td>
-                                <td>顯示玩家選擇的支付方式<br>包括: 銀行轉賬、信用卡、虛擬貨幣、現金等</td>
+                                <td>顯示使用者選擇的支付方式<br>包括: 銀行轉賬、信用卡、虛擬貨幣、現金等</td>
                                 <td>文字顯示</td>
                             </tr>
                             <tr>
@@ -1105,17 +1105,17 @@
                             </tr>
                             <tr>
                                 <td>狀態</td>
-                                <td>顯示該支付通知的處理狀態<br>• 待處理(橙色): 已接收通知,待人工確認<br>• 已補單(綠色): 已確認並完成補單,資金已到帳<br>• 已退款(藍色): 已確認並退款給玩家<br>• 已忽略(灰色): 確認為無效通知,已標記忽略</td>
+                                <td>顯示該支付通知的處理狀態<br>• 待處理(橙色): 已接收通知,待人工確認<br>• 已補單(綠色): 已確認並完成補單,資金已到帳<br>• 已退款(藍色): 已確認並退款給使用者<br>• 已忽略(灰色): 確認為無效通知,已標記忽略</td>
                                 <td>彩色標籤</td>
                             </tr>
                             <tr>
                                 <td>創建時間</td>
-                                <td>顯示玩家發起支付申請的時間<br>格式: YYYY-MM-DD HH:mm:ss<br>根據選擇的時區顯示對應時間<br>點擊欄位標題可進行時間排序</td>
+                                <td>顯示使用者發起支付申請的時間<br>格式: YYYY-MM-DD HH:mm:ss<br>根據選擇的時區顯示對應時間<br>點擊欄位標題可進行時間排序</td>
                                 <td>時間格式,可排序</td>
                             </tr>
                             <tr>
                                 <td>操作</td>
-                                <td>提供支付通知處理功能<br>點擊「處理」按鈕可對該通知進行相關操作<br>包括: 補單(給玩家加錢)、退款、或標記為忽略</td>
+                                <td>提供支付通知處理功能<br>點擊「處理」按鈕可對該通知進行相關操作<br>包括: 補單(給使用者加錢)、退款、或標記為忽略</td>
                                 <td>操作按鈕</td>
                             </tr>
                         </tbody>
@@ -1145,10 +1145,10 @@
                                     • 三方訂單號: 第三方支付系統的訂單編號<br>
                                     • 訂單種類: 充值或提款<br>
                                     • 狀態: 當前處理狀態(待處理/已補單/已退款/已忽略)<br>
-                                    • 帳號: 玩家帳號名稱<br>
+                                    • 帳號: 使用者帳號名稱<br>
                                     • 用戶編號: 系統內部用戶ID<br>
                                     • 金額: 交易金額及幣種<br>
-                                    • 地址: 支付錢包地址或銀行帳號<br>
+                                    • 地址: 支付帳戶地址或銀行帳號<br>
                                     • TXID: 交易哈希值或交易憑證編號
                                 </td>
                             </tr>
@@ -1168,13 +1168,13 @@
                                 <td>✓ 補單</td>
                                 <td>
                                     <strong style="color: #67c23a;">確認交易有效並完成入帳</strong><br>
-                                    • 系統會直接將對應金額補充到玩家帳戶<br>
-                                    • 適用於充值訂單,玩家已付款但系統未自動入帳<br>
+                                    • 系統會直接將對應金額補充到使用者帳戶<br>
+                                    • 適用於充值訂單,使用者已付款但系統未自動入帳<br>
                                     • 操作後訂單狀態變更為「已補單」<br>
                                     • <strong style="color: #f56c6c;">此操作無法撤銷,請謹慎確認</strong>
                                 </td>
                                 <td>
-                                    • 玩家充值已付款<br>
+                                    • 使用者充值已付款<br>
                                     • 第三方確認收款成功<br>
                                     • 系統因故未自動匹配<br>
                                     • 核對交易資訊無誤
@@ -1199,16 +1199,16 @@
                             <tr>
                                 <td>↩ 退款</td>
                                 <td>
-                                    <strong style="color: #f56c6c;">將款項退回給玩家</strong><br>
-                                    • 系統會將資金退回到玩家原支付帳戶<br>
-                                    • 適用於錯誤收款、重複收款或玩家要求退款的情況<br>
+                                    <strong style="color: #f56c6c;">將款項退回給使用者</strong><br>
+                                    • 系統會將資金退回到使用者原支付帳戶<br>
+                                    • 適用於錯誤收款、重複收款或使用者要求退款的情況<br>
                                     • 操作後訂單狀態變更為「已退款」<br>
                                     • 退款流程需根據不同支付渠道的規定進行
                                 </td>
                                 <td>
-                                    • 玩家誤付或重複付款<br>
+                                    • 使用者誤付或重複付款<br>
                                     • 交易金額有誤<br>
-                                    • 玩家申請取消交易<br>
+                                    • 使用者申請取消交易<br>
                                     • 不符合收款條件
                                 </td>
                             </tr>
@@ -1219,7 +1219,7 @@
                                     • 系統會將此通知標記為已忽略,不進行任何帳戶操作<br>
                                     • 適用於測試訂單、重複通知、或確認無效的交易通知<br>
                                     • 操作後訂單狀態變更為「已忽略」<br>
-                                    • 不會影響玩家帳戶餘額
+                                    • 不會影響使用者帳戶餘額
                                 </td>
                                 <td>
                                     • 測試交易通知<br>
@@ -1233,8 +1233,8 @@
 
                     <div style="background: #ffebee; border: 1px solid #ffcdd2; border-radius: 4px; padding: 12px; margin: 16px; font-size: 13px; color: #c62828; line-height: 1.8;">
                         <strong>⚠️ 操作注意事項:</strong><br>
-                        1. <strong>補單前必須核對</strong>: 確認玩家賬號、金額、幣種、支付渠道等資訊完全正確<br>
-                        2. <strong>避免重複操作</strong>: 每筆通知只能處理一次,請勿重複補單造成玩家帳戶異常<br>
+                        1. <strong>補單前必須核對</strong>: 確認使用者賬號、金額、幣種、支付渠道等資訊完全正確<br>
+                        2. <strong>避免重複操作</strong>: 每筆通知只能處理一次,請勿重複補單造成使用者帳戶異常<br>
                         3. <strong>確認支付憑證</strong>: 建議核對TXID或銀行交易記錄,確保款項確實已收到<br>
                         4. <strong>記錄處理原因</strong>: 系統會記錄處理人員和處理時間,建議在備註中說明處理原因<br>
                         5. <strong>特殊情況上報</strong>: 遇到大額交易或可疑交易,請先上報主管確認後再處理<br>
@@ -1248,7 +1248,7 @@
                         <strong>步驟3:</strong> 確認第三方支付平台是否已實際收到款項<br>
                         <strong>步驟4:</strong> 根據實際情況選擇對應的處理操作<br>
                         <strong>步驟5:</strong> 確認操作後,系統會自動更新訂單狀態<br>
-                        <strong>步驟6:</strong> 若是補單操作,建議通知玩家已完成處理
+                        <strong>步驟6:</strong> 若是補單操作,建議通知使用者已完成處理
                     </div>
                 </div>
             </div>
@@ -1302,9 +1302,9 @@
                 </div>
                 <div style="background: #f0f9ff; border: 1px solid #b3d8ff; border-radius: 4px; padding: 12px; margin-bottom: 20px; font-size: 13px; color: #1565c0;">
                     <strong>選擇操作:</strong><br>
-                    • <strong>補單</strong>: 確認交易有效,直接給玩家帳戶補上對應金額<br>
+                    • <strong>補單</strong>: 確認交易有效,直接給使用者帳戶補上對應金額<br>
                     • <strong>配對現有訂單</strong>: 將此通知與系統中已存在的訂單進行匹配關連<br>
-                    • <strong>退款</strong>: 將款項退回給玩家原支付帳戶<br>
+                    • <strong>退款</strong>: 將款項退回給使用者原支付帳戶<br>
                     • <strong>忽略</strong>: 標記為無效通知或重複通知,系統不進行任何操作
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
@@ -1362,7 +1362,7 @@
                             </svg>
                         </span>
                         <input type="checkbox" class="column-checkbox" id="col-player-account" checked>
-                        <label class="column-label" for="col-player-account">玩家賬號</label>
+                        <label class="column-label" for="col-player-account">使用者賬號</label>
                         <div class="pin-buttons">
                             <button class="pin-btn" onclick="pinColumn('player-account', 'left')">釘選到左側</button>
                             <button class="pin-btn" onclick="unpinColumn('player-account')">取消釘選</button>
@@ -1635,8 +1635,8 @@
                             <input type="text" id="edit-order-no" placeholder="請輸入第三方訂單號" required>
                         </div>
                         <div class="form-field">
-                            <label>玩家賬號 <span class="required">*</span></label>
-                            <input type="text" id="edit-player-account" placeholder="請輸入玩家賬號" required>
+                            <label>使用者賬號 <span class="required">*</span></label>
+                            <input type="text" id="edit-player-account" placeholder="請輸入使用者賬號" required>
                         </div>
                     </div>
 
@@ -1666,9 +1666,9 @@
                             <label>支付渠道 <span class="required">*</span></label>
                             <select id="edit-payment-channel" required>
                                 <option value="">請選擇</option>
-                                <option value="MatchPlay">MatchPlay</option>
-                                <option value="GoldAnt">GoldAnt</option>
-                                <option value="8v">8v</option>
+                                <option value="payment1">payment1</option>
+                                <option value="payment2">payment2</option>
+                                <option value="payment3">payment3</option>
                                 <option value="TRC20">TRC20</option>
                                 <option value="ERC20">ERC20</option>
                                 <option value="線下">線下</option>
@@ -1701,7 +1701,7 @@
                     <div class="form-row">
                         <div class="form-field full-width">
                             <label>支付地址/帳號</label>
-                            <input type="text" id="edit-address" placeholder="錢包地址、銀行帳號或卡號 (選填)">
+                            <input type="text" id="edit-address" placeholder="帳戶地址、銀行帳號或卡號 (選填)">
                         </div>
                     </div>
 
@@ -1753,8 +1753,8 @@
                             <input type="text" id="create-order-no" placeholder="請輸入第三方訂單號" required>
                         </div>
                         <div class="form-field">
-                            <label>玩家賬號 <span class="required">*</span></label>
-                            <input type="text" id="create-player-account" placeholder="請輸入玩家賬號" required>
+                            <label>使用者賬號 <span class="required">*</span></label>
+                            <input type="text" id="create-player-account" placeholder="請輸入使用者賬號" required>
                         </div>
                     </div>
 
@@ -1784,9 +1784,9 @@
                             <label>支付渠道 <span class="required">*</span></label>
                             <select id="create-payment-channel" required>
                                 <option value="">請選擇</option>
-                                <option value="MatchPlay">MatchPlay</option>
-                                <option value="GoldAnt">GoldAnt</option>
-                                <option value="8v">8v</option>
+                                <option value="payment1">payment1</option>
+                                <option value="payment2">payment2</option>
+                                <option value="payment3">payment3</option>
                                 <option value="TRC20">TRC20</option>
                                 <option value="ERC20">ERC20</option>
                                 <option value="線下">線下</option>
@@ -1819,7 +1819,7 @@
                     <div class="form-row">
                         <div class="form-field full-width">
                             <label>支付地址/帳號</label>
-                            <input type="text" id="create-address" placeholder="錢包地址、銀行帳號或卡號 (選填)">
+                            <input type="text" id="create-address" placeholder="帳戶地址、銀行帳號或卡號 (選填)">
                         </div>
                     </div>
 
@@ -1907,7 +1907,7 @@
         function handleDetail(paymentId) {
             const mockData = {
                 '520105': { orderNo: '520105', orderType: '提款', status: '已補單', account: 'Zombie01A03', userId: '10000192', amount: '15,000.00 JPY', address: '大阪銀行 6228-4800-1234', txid: 'cgg5ec201642177c3f6h9484903880h4de51ghffee195eg', processor: 'Admin_Zhang', processTime: '2025-12-26 15:15:30', remark: '人工核實後補單' },
-                '520106': { orderNo: '520106', orderType: '充值', status: '已退款', account: 'Zombie01A03', userId: '10000192', amount: '500.00 USDT', address: '0x8f3Cf7ad23Cd3735AFf958023239c6A063', txid: 'dff4dc201642177c3f6h9484903880h4de51ghffee195eg', processor: 'Admin_Li', processTime: '2025-12-26 14:20:15', remark: '玩家重複付款,已退款' }
+                '520106': { orderNo: '520106', orderType: '充值', status: '已退款', account: 'Zombie01A03', userId: '10000192', amount: '500.00 USDT', address: '0x8f3Cf7ad23Cd3735AFf958023239c6A063', txid: 'dff4dc201642177c3f6h9484903880h4de51ghffee195eg', processor: 'Admin_Li', processTime: '2025-12-26 14:20:15', remark: '使用者重複付款,已退款' }
             };
             const data = mockData[paymentId] || mockData['520105'];
             
@@ -2175,7 +2175,7 @@
                     playerAccount: 'testnorman',
                     paymentType: '提款', 
                     paymentMethod: '銀行轉賬',
-                    paymentChannel: 'GoldAnt',
+                    paymentChannel: 'payment2',
                     currency: 'USD',
                     amount: '20.00',
                     userId: '10000191',
