@@ -1603,11 +1603,11 @@
                 
                 <div class="search-additional-rows">
                     <div class="search-item">
-                        <label class="search-label">所屬代理:</label>
+                        <label class="search-label">所屬部門:</label>
                         <select id="agent" class="search-select">
                             <option value="">  </option>
-                            <option value="ivLv4UAT">ivLv4UAT</option>
-                            <option value="System">System</option>
+                            <option value="user002">user002</option>
+                            <option value="user001">user001</option>
                             <option value="Agent001">Agent001</option>
                         </select>
                     </div>
@@ -1632,9 +1632,9 @@
                         <label class="search-label">支付渠道:</label>
                         <select id="paymentChannel" class="search-select">
                             <option value="">  </option>
-                            <option value="MatchPlay">MatchPlay</option>
-                            <option value="GoldAnt">GoldAnt</option>
-                            <option value="8v">8v</option>
+                            <option value="payment1">payment1</option>
+                            <option value="payment2">payment2</option>
+                            <option value="payment3">payment3</option>
                             <option value="線下">線下</option>
                         </select>
                     </div>
@@ -1743,7 +1743,7 @@
                             <td>testnorman</td>
                             <td><span class="payment-type deposit">充值</span></td>
                             <td>銀行轉賬</td>
-                            <td>MatchPlay</td>
+                            <td>payment2</td>
                             <td>JPY</td>
                             <td class="amount">2,000.00</td>
                             <td class="amount">2,000.00</td>
@@ -1763,7 +1763,7 @@
                             <td>testnorman</td>
                             <td><span class="payment-type withdraw">提款</span></td>
                             <td>銀行轉賬</td>
-                            <td>GoldAnt</td>
+                            <td>payment1</td>
                             <td>USD</td>
                             <td class="amount">20.00</td>
                             <td class="amount">2,400.00</td>
@@ -1788,7 +1788,7 @@
                             <td>Zombie01A03</td>
                             <td><span class="payment-type withdraw">提款</span></td>
                             <td>銀行轉賬</td>
-                            <td>MatchPlay</td>
+                            <td>payment2</td>
                             <td>JPY</td>
                             <td class="amount">15,000.00</td>
                             <td class="amount">15,000.00</td>
@@ -1904,8 +1904,8 @@
                             <tr>
                                 <td>資料權限</td>
                                 <td>
-                                    使用者僅能查看自己所屬代理及其下級代理的支付資料。<br>
-                                    系統管理員可查看所有代理的支付記錄。
+                                    使用者僅能查看自己所屬部門及其下級部門的支付資料。<br>
+                                    系統管理員可查看所有部門的支付記錄。
                                 </td>
                             </tr>
                         </tbody>
@@ -1993,11 +1993,11 @@
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
-                                <td>所屬代理</td>
+                                <td>所屬部門</td>
                                 <td>
-                                    點擊選擇所屬代理<br>
-                                    預設空值,代表查詢全部代理<br>
-                                    僅顯示當前用戶有權限查看的代理列表<br>
+                                    點擊選擇所屬部門<br>
+                                    預設空值,代表查詢全部部門<br>
+                                    僅顯示當前用戶有權限查看的部門列表<br>
                                 </td>
                                 <td>下拉選單,非必填</td>
                             </tr>
@@ -2024,7 +2024,7 @@
                                 <td>
                                     點擊選擇支付渠道<br>
                                     預設空值,代表查詢全部渠道<br>
-                                    下拉選單: MatchPlay、GoldAnt、8v、線下<br>
+                                    下拉選單: payment1、payment2、payment3、線下<br>
                                     每個渠道對應不同的第三方支付廠商
                                 </td>
                                 <td>下拉選單,非必填</td>
@@ -2432,7 +2432,7 @@
                                     • 支付系統ID: 系統內部唯一識別碼,可複製<br>
                                     • 支付廠商ID: 第三方支付平台的訂單編號,可複製<br>
                                     • 玩家帳號: 發起支付的玩家帳號<br>
-                                    • 所屬代理: 該玩家所屬的代理商<br>
+                                    • 所屬部門: 該玩家所屬的部門<br>
                                     • 玩家錢包位址: 該玩家所屬的錢包位置,可複製
                                 </td>
                                 <td>ID快速複製</td>
@@ -2796,7 +2796,7 @@
                             <span class="info-value" id="playerName">testnorman</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">所屬代理:</span>
+                            <span class="info-label">所屬部門:</span>
                             <span class="info-value" id="agentName">ivLv4UAT</span>
                         </div>
                         <div class="info-item">
@@ -2823,7 +2823,7 @@
                         </div>
                         <div class="info-item">
                             <span class="info-label">支付渠道:</span>
-                            <span class="info-value" id="paymentChannel">MatchPlay</span>
+                            <span class="info-value" id="paymentChannel">payment2</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">付款錢包:</span>
@@ -3233,7 +3233,7 @@
                     agentName: 'ivLv4UAT',
                     playerWalletAddress: '0x742d35Cc6634C44Bc7595f0bEb',
                     paymentMethod: '銀行轉賬',
-                    paymentChannel: 'MatchPlay',
+                    paymentChannel: 'payment2',
                     paymentWallet: '台灣銀行 1234-5678-9012-3456',
                     applyCurrency: 'JPY',
                     applyAmount: '2,000.00',
@@ -3255,7 +3255,7 @@
                     agentName: 'ivLv4UAT',
                     playerWalletAddress: '0x742d35Cc63eTH32634C44Bc7595f0bEb',
                     paymentMethod: '信用卡',
-                    paymentChannel: 'GoldAnt',
+                    paymentChannel: 'payment1',
                     paymentWallet: 'VISA **** **** **** 1234',
                     applyCurrency: 'USD',
                     applyAmount: '20.00',
@@ -3278,7 +3278,7 @@
                     agentName: 'Zombie01',
                     playerWalletAddress: '0x8f3Cf7ad23Cd3735AFf958023239c6A063',
                     paymentMethod: '銀行轉賬',
-                    paymentChannel: 'MatchPlay',
+                    paymentChannel: 'payment2',
                     paymentWallet: '大阪銀行 6228-4800-1234-5678',
                     applyCurrency: 'JPY',
                     applyAmount: '15,000.00',
@@ -3301,7 +3301,7 @@
                     agentName: 'Zombie01',
                     playerWalletAddress: '0x8f3Cf7ad23Cd3CaDD97AFf9580239c6A063',
                     paymentMethod: '虛擬貨幣',
-                    paymentChannel: '8v',
+                    paymentChannel: 'payment3',
                     paymentWallet: '0x742d35Cc6634C44Bc7595f0bEb',
                     applyCurrency: 'USDT',
                     applyAmount: '500.00',
@@ -3324,7 +3324,7 @@
                     agentName: 'ivLv4UAT',
                     playerWalletAddress: '0x742d35Cc6634C44Bc7595f0bEb',
                     paymentMethod: '虛擬貨幣',
-                    paymentChannel:'8v',
+                    paymentChannel:'payment3',
                     paymentWallet: '台灣銀行 9876-5432-1098-7654',
                     applyCurrency: 'USDT',
                     applyAmount: '1,000.00',
