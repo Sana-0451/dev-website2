@@ -1613,7 +1613,7 @@
                     </div>
                     
                     <div class="search-item">
-                        <label class="search-label">玩家賬號:</label>
+                        <label class="search-label">使用者賬號:</label>
                         <input type="text" id="playerAccount" class="search-input" placeholder=" ">
                     </div>
                     
@@ -1718,7 +1718,7 @@
                     <thead>
                         <tr>
                             <th>後台單號</th>
-                            <th>玩家賬號</th>
+                            <th>使用者賬號</th>
                             <th>支付種類</th>
                             <th>支付方式</th>
                             <th>支付渠道</th>
@@ -1938,7 +1938,7 @@
                                     點擊可選擇查詢的時間維度<br>
                                     <strong class="highlight-text">預設為創建時間</strong><br>
                                     下拉選單: 創建時間、更新時間<br>
-                                    • 創建時間: 玩家發起支付申請的時間<br>
+                                    • 創建時間: 使用者發起支付申請的時間<br>
                                     • 更新時間: 支付訂單最後一次狀態變更的時間
                                 </td>
                                 <td>下拉選單,必填</td>
@@ -2002,10 +2002,10 @@
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
-                                <td>玩家賬號</td>
+                                <td>使用者賬號</td>
                                 <td>
-                                    點擊輸入玩家賬號進行精確查詢<br>
-                                    預設空值,代表查詢全部玩家<br>
+                                    點擊輸入使用者賬號進行精確查詢<br>
+                                    預設空值,代表查詢全部使用者<br>
                                 </td>
                                 <td>輸入框,非必填</td>
                             </tr>
@@ -2035,8 +2035,8 @@
                                     點擊選擇支付種類<br>
                                     預設空值,代表查詢全部種類<br>
                                     下拉選單: 充值、提款<br>
-                                    • 充值: 玩家存入資金到遊戲帳戶<br>
-                                    • 提款: 玩家從遊戲帳戶提取資金
+                                    • 充值: 使用者存入資金到遊戲帳戶<br>
+                                    • 提款: 使用者從遊戲帳戶提取資金
                                 </td>
                                 <td>下拉選單,非必填</td>
                             </tr>
@@ -2313,9 +2313,9 @@
                                 <td>藍色連結+複製功能</td>
                             </tr>
                             <tr>
-                                <td>玩家賬號</td>
+                                <td>使用者賬號</td>
                                 <td>
-                                    顯示發起支付申請的玩家帳號
+                                    顯示發起支付申請的使用者帳號
                                 </td>
                                 <td>文字顯示</td>
                             </tr>
@@ -2323,15 +2323,15 @@
                                 <td>支付種類</td>
                                 <td>
                                     顯示該筆交易的類型<br>
-                                    • 充值(綠色標籤): 玩家存入資金<br>
-                                    • 提款(橙色標籤): 玩家提取資金
+                                    • 充值(綠色標籤): 使用者存入資金<br>
+                                    • 提款(橙色標籤): 使用者提取資金
                                 </td>
                                 <td>彩色標籤</td>
                             </tr>
                             <tr>
                                 <td>支付方式</td>
                                 <td>
-                                    顯示玩家選擇的支付方式<br>
+                                    顯示使用者選擇的支付方式<br>
                                     包含: 銀行轉賬、信用卡、虛擬貨幣、現金等
                                 </td>
                                 <td>文字顯示</td>
@@ -2375,7 +2375,7 @@
                             <tr>
                                 <td>創建時間</td>
                                 <td>
-                                    顯示玩家發起支付申請的時間<br>
+                                    顯示使用者發起支付申請的時間<br>
                                     格式: YYYY-MM-DD HH:mm:ss<br>
                                     根據選擇的時區顯示對應時間<br>
                                     點擊欄位標題可進行時間排序
@@ -2431,9 +2431,9 @@
                                 <td>
                                     • 支付系統ID: 系統內部唯一識別碼,可複製<br>
                                     • 支付廠商ID: 第三方支付平台的訂單編號,可複製<br>
-                                    • 玩家帳號: 發起支付的玩家帳號<br>
-                                    • 所屬部門: 該玩家所屬的部門<br>
-                                    • 玩家錢包位址: 該玩家所屬的錢包位置,可複製
+                                    • 使用者帳號: 發起支付的使用者帳號<br>
+                                    • 所屬部門: 該使用者所屬的部門<br>
+                                    • 使用者錢包位址: 該使用者所屬的錢包位置,可複製
                                 </td>
                                 <td>ID快速複製</td>
                             </tr>
@@ -2442,10 +2442,10 @@
                                 <td>
                                     • 支付方式: 銀行轉賬/信用卡/虛擬貨幣等<br>
                                     • 支付渠道: 處理該筆交易的第三方平台<br>
-                                    • 支付錢包: 玩家付款的錢包位置/銀行帳號/銀行卡號,可複製<br>
-                                    • 申請幣種: 玩家發起申請時的貨幣類型<br>
-                                    • 申請金額: 玩家申請的原始金額<br>
-                                    • 匯率: 玩家申請當下，幣種轉換的匯率<br>
+                                    • 支付錢包: 使用者付款的錢包位置/銀行帳號/銀行卡號,可複製<br>
+                                    • 申請幣種: 使用者發起申請時的貨幣類型<br>
+                                    • 申請金額: 使用者申請的原始金額<br>
+                                    • 匯率: 使用者申請當下，幣種轉換的匯率<br>
                                     • 手續費: 該筆交易產生的手續費
                                 </td>
                                 <td>完整支付申請的資訊</td>
@@ -2462,7 +2462,7 @@
                             <tr>
                                 <td>時間資訊</td>
                                 <td>
-                                    • 申請時間: 玩家發起支付申請的時間<br>
+                                    • 申請時間: 使用者發起支付申請的時間<br>
                                     • 更新時間: 訂單最後一次狀態變更的時間<br>
                                     • 審核人: 處理該訂單的人員或系統<br>
                                 </td>
@@ -2577,7 +2577,7 @@
                             </div>
                         </div>
 
-                        <!-- 玩家賬號 -->
+                        <!-- 使用者賬號 -->
                         <div class="column-list-item">
                             <div class="drag-handle">≡</div>
                             <div class="column-checkbox-container">
@@ -2586,7 +2586,7 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="column-name-display">玩家賬號</div>
+                            <div class="column-name-display">使用者賬號</div>
                             <div class="column-action-buttons">
                                 <button class="column-action-btn" onclick="togglePin(this, 'left')">釘選到左側</button>
                                 <button class="column-action-btn" onclick="togglePin(this, 'none')">取消釘選</button>
@@ -2792,7 +2792,7 @@
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">玩家帳號:</span>
+                            <span class="info-label">使用者帳號:</span>
                             <span class="info-value" id="playerName">testnorman</span>
                         </div>
                         <div class="info-item">
@@ -2800,7 +2800,7 @@
                             <span class="info-value" id="agentName">ivLv4UAT</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">玩家錢包位置:</span>
+                            <span class="info-label">使用者錢包位置:</span>
                             <div class="info-value-with-copy">
                                 <span class="info-value" id="playerWalletAddress" style="word-break: break-all; font-size: 12px;">0x742d35Cc6634C44Bc7595f0bEb</span>
                                 <span class="copy-icon-small" onclick="copyToClipboard(document.getElementById('playerWalletAddress').textContent)" title="複製">
