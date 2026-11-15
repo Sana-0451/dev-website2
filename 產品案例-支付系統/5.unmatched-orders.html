@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>未匹配訂單列表</title>
+    <title>未匹配支付訂單</title>
     <style>
         * {
             margin: 0;
@@ -704,7 +704,7 @@
     <main class="main-content">
         <div class="container">
             <div class="header">
-                <h1>未匹配訂單列表</h1>
+                <h1>未匹配支付訂單</h1>
             </div>
 
             <div class="search-section" id="searchSection">
@@ -714,19 +714,19 @@
                         <select id="timezone" class="search-select">
                             <option value=""></option>
                             <option value="UTC-4">UTC-4</option>
-                            <option value="UTC+8">UTC+8</option>
+                            <option value="UTC+0">UTC+0</option><option value="UTC+4">UTC+4</option><option value="UTC+7">UTC+7</option><option value="UTC+8">UTC+8</option><option value="UTC+9">UTC+9</option>
                         </select>
                     </div>
                     <div class="search-item">
                         <label class="search-label">🕒</label>
                         <div style="display: flex; gap: 8px;">
-                            <input type="date" class="date-input" value="2025-05-25">
+                            <input type="date" class="date-input" value="2025-08-11">
                             <span>~</span>
-                            <input type="date" class="date-input" value="2025-05-25">
+                            <input type="date" class="date-input" value="2025-08-11">
                         </div>
                     </div>
                     <div class="search-item">
-                        <label class="search-label">支付系統單號:</label>
+                        <label class="search-label">三方訂單號:</label>
                         <input type="text" class="search-input" placeholder="">
                     </div>
                     <div class="search-item">
@@ -744,14 +744,14 @@
                 
                 <div class="search-additional-rows">
                     <div class="search-item">
-                        <label class="search-label">使用者賬號:</label>
+                        <label class="search-label">會員帳號:</label>
                         <input type="text" class="search-input">
                     </div>
                     <div class="search-item">
                         <label class="search-label">支付方式:</label>
                         <select class="search-select">
                             <option value=""></option>
-                            <option value="銀行轉賬">銀行轉賬</option>
+                            <option value="銀行轉帳">銀行轉帳</option>
                             <option value="虛擬貨幣">虛擬貨幣</option>
                         </select>
                     </div>
@@ -759,7 +759,7 @@
                         <label class="search-label">支付渠道:</label>
                         <select class="search-select">
                             <option value=""></option>
-                            <option value="payment1">payment1</option>
+                            <option value="支付商A">支付商A</option><option value="支付商B">支付商B</option><option value="支付商C">支付商C</option>
                         </select>
                     </div>
                     <div class="search-item">
@@ -796,7 +796,7 @@
                     <thead>
                         <tr>
                             <th data-col="order-id">三方訂單號</th>
-                            <th data-col="player-account">使用者賬號</th>
+                            <th data-col="player-account">會員帳號</th>
                             <th data-col="payment-type">支付種類</th>
                             <th data-col="payment-method">支付方式</th>
                             <th data-col="payment-channel">支付渠道</th>
@@ -818,15 +818,15 @@
                                 </span>
                                 <a href="javascript:void(0)" class="game-id">520103</a>
                             </td>
-                            <td data-col="player-account">test0001</td>
+                            <td data-col="player-account">member004</td>
                             <td data-col="payment-type"><span class="payment-type deposit">充值</span></td>
                             <td data-col="payment-method">虛擬貨幣</td>
-                            <td data-col="payment-channel">TRC20</td>
+                            <td data-col="payment-channel">支付商A</td>
                             <td data-col="currency">USDT</td>
-                            <td data-col="amount" class="amount">5.400000</td>
+                            <td data-col="amount" class="amount">5.40</td>
                             <td data-col="status"><span class="status-tag status-pending">待處理</span></td>
                             <td data-col="create-type">系統回調</td>
-                            <td data-col="create-time">2025-12-26 17:19:11</td>
+                            <td data-col="create-time">2025-08-11 17:19:11</td>
                             <td data-col="update-time">-</td>
                             <td data-col="admin-account">-</td>
                             <td data-col="action">
@@ -840,15 +840,15 @@
                                 </span>
                                 <a href="javascript:void(0)" class="game-id">520104</a>
                             </td>
-                            <td data-col="player-account">testnorman</td>
+                            <td data-col="player-account">member001</td>
                             <td data-col="payment-type"><span class="payment-type withdraw">提款</span></td>
-                            <td data-col="payment-method">銀行轉賬</td>
-                            <td data-col="payment-channel">payment2</td>
+                            <td data-col="payment-method">銀行轉帳</td>
+                            <td data-col="payment-channel">支付商B</td>
                             <td data-col="currency">USD</td>
                             <td data-col="amount" class="amount">20.00</td>
                             <td data-col="status"><span class="status-tag status-pending">待處理</span></td>
                             <td data-col="create-type">手動建單</td>
-                            <td data-col="create-time">2025-12-26 18:20:15</td>
+                            <td data-col="create-time">2025-08-11 18:20:15</td>
                             <td data-col="update-time">-</td>
                             <td data-col="admin-account">-</td>
                             <td data-col="action">
@@ -863,16 +863,16 @@
                                 </span>
                                 <a href="javascript:void(0)" class="game-id">520105</a>
                             </td>
-                            <td data-col="player-account">Zombie01A03</td>
-                            <td data-col="payment-type"><span class="payment-type withdraw">提款</span></td>
-                            <td data-col="payment-method">銀行轉賬</td>
-                            <td data-col="payment-channel">payment1</td>
+                            <td data-col="player-account">member002</td>
+                            <td data-col="payment-type"><span class="payment-type deposit">充值</span></td>
+                            <td data-col="payment-method">銀行轉帳</td>
+                            <td data-col="payment-channel">支付商C</td>
                             <td data-col="currency">JPY</td>
                             <td data-col="amount" class="amount">15,000.00</td>
                             <td data-col="status"><span class="status-tag status-completed">已補單</span></td>
                             <td data-col="create-type">系統回調</td>
-                            <td data-col="create-time">2025-12-26 15:11:10</td>
-                            <td data-col="update-time">2026-01-23 08:20:15</td>
+                            <td data-col="create-time">2025-08-11 15:11:10</td>
+                            <td data-col="update-time">2025-08-11 16:20:15</td>
                             <td data-col="admin-account">admin01</td>
                             <td data-col="action">
                                 <button class="action-btn" style="background: #909399; border-color: #909399;" onclick="handleDetail('520105')">詳情</button>
@@ -885,16 +885,16 @@
                                 </span>
                                 <a href="javascript:void(0)" class="game-id">520106</a>
                             </td>
-                            <td data-col="player-account">Zombie01A03</td>
+                            <td data-col="player-account">member002</td>
                             <td data-col="payment-type"><span class="payment-type deposit">充值</span></td>
                             <td data-col="payment-method">虛擬貨幣</td>
-                            <td data-col="payment-channel">ERC20</td>
+                            <td data-col="payment-channel">支付商A</td>
                             <td data-col="currency">USDT</td>
                             <td data-col="amount" class="amount">500.00</td>
                             <td data-col="status"><span class="status-tag status-refunded">已退款</span></td>
                             <td data-col="create-type">手動建單</td>
-                            <td data-col="create-time">2025-12-26 14:11:00</td>
-                            <td data-col="update-time">2026-01-23 08:20:15</td>
+                            <td data-col="create-time">2025-08-11 14:11:00</td>
+                            <td data-col="update-time">2025-08-11 16:20:15</td>
                             <td data-col="admin-account">admin01</td>
                             <td data-col="action">
                                 <button class="action-btn" style="background: #909399; border-color: #909399;" onclick="handleDetail('520106')">詳情</button>
@@ -907,16 +907,16 @@
                                 </span>
                                 <a href="javascript:void(0)" class="game-id">520107</a>
                             </td>
-                            <td data-col="player-account">testiven01</td>
+                            <td data-col="player-account">member003</td>
                             <td data-col="payment-type"><span class="payment-type deposit">充值</span></td>
                             <td data-col="payment-method">虛擬貨幣</td>
-                            <td data-col="payment-channel">TRC20</td>
+                            <td data-col="payment-channel">支付商A</td>
                             <td data-col="currency">USDT</td>
                             <td data-col="amount" class="amount">1,000.00</td>
                             <td data-col="status"><span class="status-tag status-ignored">已忽略</span></td>
                             <td data-col="create-type">系統回調</td>
-                            <td data-col="create-time">2025-12-26 13:10:58</td>
-                            <td data-col="update-time">2026-01-23 08:20:15</td>
+                            <td data-col="create-time">2025-08-11 13:10:58</td>
+                            <td data-col="update-time">2025-08-11 16:20:15</td>
                             <td data-col="admin-account">admin01</td>
                             <td data-col="action">
                                 <button class="action-btn" style="background: #e6a23c; border-color: #e6a23c;" onclick="handleRestore('520107')">恢復</button>
@@ -926,7 +926,7 @@
                 </table>
 
                 <div class="pagination">
-                    <div>共 1 頁 10 條,合計 9580 條</div>
+                    <div>共 3 頁,每頁 10 條,合計 25 條</div>
                     <div class="pagination-controls">
                         <button class="page-btn" disabled>‹</button>
                         <button class="page-btn active">1</button>
@@ -966,7 +966,7 @@
                             </tr>
                             <tr>
                                 <td>資料權限</td>
-                                <td>使用者僅能查看自己所屬代理及其下級代理的支付資料。<br>系統管理員可查看所有代理的支付記錄。</td>
+                                <td>使用者僅能查看自己所屬部門及其下級部門的支付資料。<br>系統管理員可查看所有部門的支付記錄。</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1002,33 +1002,33 @@
                                 <td>日期選擇器,必填</td>
                             </tr>
                             <tr>
-                                <td>支付系統ID</td>
-                                <td>點擊輸入支付系統ID進行精確查詢<br>預設空值,代表查詢全部</td>
+                                <td>三方訂單號</td>
+                                <td>點擊輸入三方訂單號進行精確查詢<br>預設空值,代表查詢全部</td>
                                 <td>輸入框,非必填</td>
                             </tr>
                             <tr>
                                 <td>狀態</td>
-                                <td>點擊可選擇不同支付狀態進行查詢<br>預設空值,代表查詢全部<br>下拉選單: 待處理、已補單、已退款、已忽略<br>• 待處理: 接收到支付通知,待人工確認處理<br>• 已補單: 已確認並完成補單操作,資金已到帳<br>• 已退款: 已確認並退回款項給使用者<br>• 已忽略: 確認為無效通知,已標記為忽略</td>
+                                <td>點擊可選擇不同支付狀態進行查詢<br>預設空值,代表查詢全部<br>下拉選單: 待處理、已補單、已退款、已忽略<br>• 待處理: 接收到支付通知,待人工確認處理<br>• 已補單: 已確認並完成補單操作,資金已到帳<br>• 已退款: 已確認並退回款項給會員<br>• 已忽略: 確認為無效通知,已標記為忽略</td>
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
-                                <td>使用者賬號</td>
-                                <td>點擊輸入使用者賬號進行精確查詢<br>預設空值,代表查詢全部使用者</td>
+                                <td>會員帳號</td>
+                                <td>點擊輸入會員帳號進行精確查詢<br>預設空值,代表查詢全部會員</td>
                                 <td>輸入框,非必填</td>
                             </tr>
                             <tr>
                                 <td>支付方式</td>
-                                <td>點擊選擇支付方式<br>預設空值,代表查詢全部方式<br>下拉選單: 銀行轉賬、信用卡、虛擬貨幣、現金...等<br>不同支付方式的手續費率可能不同</td>
+                                <td>點擊選擇支付方式<br>預設空值,代表查詢全部方式<br>下拉選單: 銀行轉帳、信用卡、虛擬貨幣、現金...等<br>不同支付方式的手續費率可能不同</td>
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
                                 <td>支付渠道</td>
-                                <td>點擊選擇支付渠道<br>預設空值,代表查詢全部渠道<br>下拉選單: payment1、payment2、payment3、線下<br>每個渠道對應不同的第三方支付廠商</td>
+                                <td>點擊選擇支付渠道<br>預設空值,代表查詢全部渠道<br>下拉選單: 支付商C、支付商B、支付商A、線下<br>每個渠道對應不同的第三方支付廠商</td>
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
                                 <td>支付種類</td>
-                                <td>點擊選擇支付種類<br>預設空值,代表查詢全部種類<br>下拉選單: 充值、提款<br>• 充值: 使用者存入資金到遊戲帳戶<br>• 提款: 使用者從遊戲帳戶提取資金</td>
+                                <td>點擊選擇支付種類<br>預設空值,代表查詢全部種類<br>下拉選單: 充值、提款<br>• 充值: 會員存入資金到平台帳戶<br>• 提款: 會員從平台帳戶提取資金</td>
                                 <td>下拉選單,非必填</td>
                             </tr>
                             <tr>
@@ -1065,27 +1065,27 @@
                         <tbody>
                             <tr>
                                 <td>未成功統計</td>
-                                <td>表格左上方顯示搜索條件內,待處理的支付通知數量<br>• 待處理注單: 已接收到支付通知,等待人工確認處理的訂單<br>點擊數字可快速篩選對應狀態的訂單</td>
+                                <td>表格左上方顯示搜索條件內,待處理的支付通知數量<br>• 待處理訂單: 已接收到支付通知,等待人工確認處理的訂單<br>點擊數字可快速篩選對應狀態的訂單</td>
                                 <td>彩色數字標籤</td>
                             </tr>
                             <tr>
-                                <td>支付系統ID</td>
+                                <td>三方訂單號</td>
                                 <td>顯示該支付通知的唯一識別號<br>此為接收到的第三方支付通知單號<br>點擊可開啟詳情抽屜查看完整資訊<br>旁邊的複製圖標可快速複製單號</td>
                                 <td>藍色連結+複製功能</td>
                             </tr>
                             <tr>
-                                <td>使用者賬號</td>
-                                <td>顯示發起支付申請的使用者帳號</td>
+                                <td>會員帳號</td>
+                                <td>顯示發起支付申請的會員帳號</td>
                                 <td>文字顯示</td>
                             </tr>
                             <tr>
                                 <td>支付種類</td>
-                                <td>顯示該筆交易的類型<br>• 充值(綠色標籤): 使用者存入資金<br>• 提款(橙色標籤): 使用者提取資金</td>
+                                <td>顯示該筆交易的類型<br>• 充值(綠色標籤): 會員存入資金<br>• 提款(橙色標籤): 會員提取資金</td>
                                 <td>彩色標籤</td>
                             </tr>
                             <tr>
                                 <td>支付方式</td>
-                                <td>顯示使用者選擇的支付方式<br>包括: 銀行轉賬、信用卡、虛擬貨幣、現金等</td>
+                                <td>顯示會員選擇的支付方式<br>包括: 銀行轉帳、信用卡、虛擬貨幣、現金等</td>
                                 <td>文字顯示</td>
                             </tr>
                             <tr>
@@ -1095,7 +1095,7 @@
                             </tr>
                             <tr>
                                 <td>幣種</td>
-                                <td>顯示該筆交易的貨幣類型<br>支持: JPY、USTD、KRW等多種幣種</td>
+                                <td>顯示該筆交易的貨幣類型<br>支持: JPY、USDT、KRW等多種幣種</td>
                                 <td>文字顯示</td>
                             </tr>
                             <tr>
@@ -1105,17 +1105,17 @@
                             </tr>
                             <tr>
                                 <td>狀態</td>
-                                <td>顯示該支付通知的處理狀態<br>• 待處理(橙色): 已接收通知,待人工確認<br>• 已補單(綠色): 已確認並完成補單,資金已到帳<br>• 已退款(藍色): 已確認並退款給使用者<br>• 已忽略(灰色): 確認為無效通知,已標記忽略</td>
+                                <td>顯示該支付通知的處理狀態<br>• 待處理(橙色): 已接收通知,待人工確認<br>• 已補單(綠色): 已確認並完成補單,資金已到帳<br>• 已退款(藍色): 已確認並退款給會員<br>• 已忽略(灰色): 確認為無效通知,已標記忽略</td>
                                 <td>彩色標籤</td>
                             </tr>
                             <tr>
                                 <td>創建時間</td>
-                                <td>顯示使用者發起支付申請的時間<br>格式: YYYY-MM-DD HH:mm:ss<br>根據選擇的時區顯示對應時間<br>點擊欄位標題可進行時間排序</td>
+                                <td>顯示會員發起支付申請的時間<br>格式: YYYY-MM-DD HH:mm:ss<br>根據選擇的時區顯示對應時間<br>點擊欄位標題可進行時間排序</td>
                                 <td>時間格式,可排序</td>
                             </tr>
                             <tr>
                                 <td>操作</td>
-                                <td>提供支付通知處理功能<br>點擊「處理」按鈕可對該通知進行相關操作<br>包括: 補單(給使用者加錢)、退款、或標記為忽略</td>
+                                <td>提供支付通知處理功能<br>點擊「處理」按鈕可對該通知進行相關操作<br>包括: 補單(給會員加錢)、退款、或標記為忽略</td>
                                 <td>操作按鈕</td>
                             </tr>
                         </tbody>
@@ -1145,10 +1145,10 @@
                                     • 三方訂單號: 第三方支付系統的訂單編號<br>
                                     • 訂單種類: 充值或提款<br>
                                     • 狀態: 當前處理狀態(待處理/已補單/已退款/已忽略)<br>
-                                    • 帳號: 使用者帳號名稱<br>
-                                    • 用戶編號: 系統內部用戶ID<br>
+                                    • 帳號: 會員帳號名稱<br>
+                                    • 會員編號: 系統內部會員ID<br>
                                     • 金額: 交易金額及幣種<br>
-                                    • 地址: 支付帳戶地址或銀行帳號<br>
+                                    • 地址: 支付錢包地址或銀行帳號<br>
                                     • TXID: 交易哈希值或交易憑證編號
                                 </td>
                             </tr>
@@ -1168,13 +1168,13 @@
                                 <td>✓ 補單</td>
                                 <td>
                                     <strong style="color: #67c23a;">確認交易有效並完成入帳</strong><br>
-                                    • 系統會直接將對應金額補充到使用者帳戶<br>
-                                    • 適用於充值訂單,使用者已付款但系統未自動入帳<br>
+                                    • 系統會直接將對應金額補充到會員帳戶<br>
+                                    • 適用於充值訂單,會員已付款但系統未自動入帳<br>
                                     • 操作後訂單狀態變更為「已補單」<br>
                                     • <strong style="color: #f56c6c;">此操作無法撤銷,請謹慎確認</strong>
                                 </td>
                                 <td>
-                                    • 使用者充值已付款<br>
+                                    • 會員充值已付款<br>
                                     • 第三方確認收款成功<br>
                                     • 系統因故未自動匹配<br>
                                     • 核對交易資訊無誤
@@ -1199,16 +1199,16 @@
                             <tr>
                                 <td>↩ 退款</td>
                                 <td>
-                                    <strong style="color: #f56c6c;">將款項退回給使用者</strong><br>
-                                    • 系統會將資金退回到使用者原支付帳戶<br>
-                                    • 適用於錯誤收款、重複收款或使用者要求退款的情況<br>
+                                    <strong style="color: #f56c6c;">將款項退回給會員</strong><br>
+                                    • 系統會將資金退回到會員原支付帳戶<br>
+                                    • 適用於錯誤收款、重複收款或會員要求退款的情況<br>
                                     • 操作後訂單狀態變更為「已退款」<br>
                                     • 退款流程需根據不同支付渠道的規定進行
                                 </td>
                                 <td>
-                                    • 使用者誤付或重複付款<br>
+                                    • 會員誤付或重複付款<br>
                                     • 交易金額有誤<br>
-                                    • 使用者申請取消交易<br>
+                                    • 會員申請取消交易<br>
                                     • 不符合收款條件
                                 </td>
                             </tr>
@@ -1219,7 +1219,7 @@
                                     • 系統會將此通知標記為已忽略,不進行任何帳戶操作<br>
                                     • 適用於測試訂單、重複通知、或確認無效的交易通知<br>
                                     • 操作後訂單狀態變更為「已忽略」<br>
-                                    • 不會影響使用者帳戶餘額
+                                    • 不會影響會員帳戶餘額
                                 </td>
                                 <td>
                                     • 測試交易通知<br>
@@ -1233,8 +1233,8 @@
 
                     <div style="background: #ffebee; border: 1px solid #ffcdd2; border-radius: 4px; padding: 12px; margin: 16px; font-size: 13px; color: #c62828; line-height: 1.8;">
                         <strong>⚠️ 操作注意事項:</strong><br>
-                        1. <strong>補單前必須核對</strong>: 確認使用者賬號、金額、幣種、支付渠道等資訊完全正確<br>
-                        2. <strong>避免重複操作</strong>: 每筆通知只能處理一次,請勿重複補單造成使用者帳戶異常<br>
+                        1. <strong>補單前必須核對</strong>: 確認會員帳號、金額、幣種、支付渠道等資訊完全正確<br>
+                        2. <strong>避免重複操作</strong>: 每筆通知只能處理一次,請勿重複補單造成會員帳戶異常<br>
                         3. <strong>確認支付憑證</strong>: 建議核對TXID或銀行交易記錄,確保款項確實已收到<br>
                         4. <strong>記錄處理原因</strong>: 系統會記錄處理人員和處理時間,建議在備註中說明處理原因<br>
                         5. <strong>特殊情況上報</strong>: 遇到大額交易或可疑交易,請先上報主管確認後再處理<br>
@@ -1248,7 +1248,7 @@
                         <strong>步驟3:</strong> 確認第三方支付平台是否已實際收到款項<br>
                         <strong>步驟4:</strong> 根據實際情況選擇對應的處理操作<br>
                         <strong>步驟5:</strong> 確認操作後,系統會自動更新訂單狀態<br>
-                        <strong>步驟6:</strong> 若是補單操作,建議通知使用者已完成處理
+                        <strong>步驟6:</strong> 若是補單操作,建議通知會員已完成處理
                     </div>
                 </div>
             </div>
@@ -1281,15 +1281,15 @@
                     </div>
                     <div>
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">帳號:</div>
-                        <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="modalAccount">test0001</div>
+                        <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="modalAccount">member004</div>
                     </div>
                     <div>
-                        <div style="font-size: 13px; color: #666; margin-bottom: 6px;">用戶編號:</div>
+                        <div style="font-size: 13px; color: #666; margin-bottom: 6px;">會員編號:</div>
                         <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="modalUserId">10000190</div>
                     </div>
                     <div>
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">金額:</div>
-                        <div style="font-size: 14px; color: #409eff; font-weight: 600; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="modalAmount">5.400000 USDT</div>
+                        <div style="font-size: 14px; color: #409eff; font-weight: 600; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="modalAmount">5.40 USDT</div>
                     </div>
                     <div style="grid-column: 1 / -1;">
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">地址:</div>
@@ -1302,9 +1302,9 @@
                 </div>
                 <div style="background: #f0f9ff; border: 1px solid #b3d8ff; border-radius: 4px; padding: 12px; margin-bottom: 20px; font-size: 13px; color: #1565c0;">
                     <strong>選擇操作:</strong><br>
-                    • <strong>補單</strong>: 確認交易有效,直接給使用者帳戶補上對應金額<br>
+                    • <strong>補單</strong>: 確認交易有效,直接給會員帳戶補上對應金額<br>
                     • <strong>配對現有訂單</strong>: 將此通知與系統中已存在的訂單進行匹配關連<br>
-                    • <strong>退款</strong>: 將款項退回給使用者原支付帳戶<br>
+                    • <strong>退款</strong>: 將款項退回給會員原支付帳戶<br>
                     • <strong>忽略</strong>: 標記為無效通知或重複通知,系統不進行任何操作
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
@@ -1362,7 +1362,7 @@
                             </svg>
                         </span>
                         <input type="checkbox" class="column-checkbox" id="col-player-account" checked>
-                        <label class="column-label" for="col-player-account">使用者賬號</label>
+                        <label class="column-label" for="col-player-account">會員帳號</label>
                         <div class="pin-buttons">
                             <button class="pin-btn" onclick="pinColumn('player-account', 'left')">釘選到左側</button>
                             <button class="pin-btn" onclick="unpinColumn('player-account')">取消釘選</button>
@@ -1564,7 +1564,7 @@
                     </div>
                     <div>
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">訂單種類:</div>
-                        <div style="font-size: 14px; color: #67c23a; font-weight: 600; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalOrderType">提款</div>
+                        <div style="font-size: 14px; color: #67c23a; font-weight: 600; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalOrderType">充值</div>
                     </div>
                     <div>
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">處理狀態:</div>
@@ -1572,10 +1572,10 @@
                     </div>
                     <div>
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">帳號:</div>
-                        <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalAccount">Zombie01A03</div>
+                        <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalAccount">member002</div>
                     </div>
                     <div>
-                        <div style="font-size: 13px; color: #666; margin-bottom: 6px;">用戶編號:</div>
+                        <div style="font-size: 13px; color: #666; margin-bottom: 6px;">會員編號:</div>
                         <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalUserId">10000192</div>
                     </div>
                     <div>
@@ -1596,11 +1596,11 @@
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
                     <div>
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">處理人員:</div>
-                        <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalProcessor">Admin_Zhang</div>
+                        <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalProcessor">審核員A</div>
                     </div>
                     <div>
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">處理時間:</div>
-                        <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalProcessTime">2025-12-26 15:15:30</div>
+                        <div style="font-size: 14px; color: #333; font-weight: 500; padding: 8px 12px; background: #f8f9fa; border-radius: 4px;" id="detailModalProcessTime">2025-08-11 15:15:30</div>
                     </div>
                     <div style="grid-column: 1 / -1;">
                         <div style="font-size: 13px; color: #666; margin-bottom: 6px;">處理備註:</div>
@@ -1635,8 +1635,8 @@
                             <input type="text" id="edit-order-no" placeholder="請輸入第三方訂單號" required>
                         </div>
                         <div class="form-field">
-                            <label>使用者賬號 <span class="required">*</span></label>
-                            <input type="text" id="edit-player-account" placeholder="請輸入使用者賬號" required>
+                            <label>會員帳號 <span class="required">*</span></label>
+                            <input type="text" id="edit-player-account" placeholder="請輸入會員帳號" required>
                         </div>
                     </div>
 
@@ -1653,7 +1653,7 @@
                             <label>支付方式 <span class="required">*</span></label>
                             <select id="edit-payment-method" required>
                                 <option value="">請選擇</option>
-                                <option value="銀行轉賬">銀行轉賬</option>
+                                <option value="銀行轉帳">銀行轉帳</option>
                                 <option value="信用卡">信用卡</option>
                                 <option value="虛擬貨幣">虛擬貨幣</option>
                                 <option value="現金">現金</option>
@@ -1666,11 +1666,9 @@
                             <label>支付渠道 <span class="required">*</span></label>
                             <select id="edit-payment-channel" required>
                                 <option value="">請選擇</option>
-                                <option value="payment1">payment1</option>
-                                <option value="payment2">payment2</option>
-                                <option value="payment3">payment3</option>
-                                <option value="TRC20">TRC20</option>
-                                <option value="ERC20">ERC20</option>
+                                <option value="支付商C">支付商C</option>
+                                <option value="支付商B">支付商B</option>
+                                <option value="支付商A">支付商A</option>
                                 <option value="線下">線下</option>
                             </select>
                         </div>
@@ -1693,15 +1691,15 @@
                             <input type="number" id="edit-amount" placeholder="請輸入金額" step="0.01" min="0" required>
                         </div>
                         <div class="form-field">
-                            <label>用戶編號</label>
-                            <input type="text" id="edit-user-id" placeholder="系統用戶ID (選填)">
+                            <label>會員編號</label>
+                            <input type="text" id="edit-user-id" placeholder="系統會員ID (選填)">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field full-width">
                             <label>支付地址/帳號</label>
-                            <input type="text" id="edit-address" placeholder="帳戶地址、銀行帳號或卡號 (選填)">
+                            <input type="text" id="edit-address" placeholder="錢包地址、銀行帳號或卡號 (選填)">
                         </div>
                     </div>
 
@@ -1753,8 +1751,8 @@
                             <input type="text" id="create-order-no" placeholder="請輸入第三方訂單號" required>
                         </div>
                         <div class="form-field">
-                            <label>使用者賬號 <span class="required">*</span></label>
-                            <input type="text" id="create-player-account" placeholder="請輸入使用者賬號" required>
+                            <label>會員帳號 <span class="required">*</span></label>
+                            <input type="text" id="create-player-account" placeholder="請輸入會員帳號" required>
                         </div>
                     </div>
 
@@ -1771,7 +1769,7 @@
                             <label>支付方式 <span class="required">*</span></label>
                             <select id="create-payment-method" required>
                                 <option value="">請選擇</option>
-                                <option value="銀行轉賬">銀行轉賬</option>
+                                <option value="銀行轉帳">銀行轉帳</option>
                                 <option value="信用卡">信用卡</option>
                                 <option value="虛擬貨幣">虛擬貨幣</option>
                                 <option value="現金">現金</option>
@@ -1784,11 +1782,9 @@
                             <label>支付渠道 <span class="required">*</span></label>
                             <select id="create-payment-channel" required>
                                 <option value="">請選擇</option>
-                                <option value="payment1">payment1</option>
-                                <option value="payment2">payment2</option>
-                                <option value="payment3">payment3</option>
-                                <option value="TRC20">TRC20</option>
-                                <option value="ERC20">ERC20</option>
+                                <option value="支付商C">支付商C</option>
+                                <option value="支付商B">支付商B</option>
+                                <option value="支付商A">支付商A</option>
                                 <option value="線下">線下</option>
                             </select>
                         </div>
@@ -1811,15 +1807,15 @@
                             <input type="number" id="create-amount" placeholder="請輸入金額" step="0.01" min="0" required>
                         </div>
                         <div class="form-field">
-                            <label>用戶編號</label>
-                            <input type="text" id="create-user-id" placeholder="系統用戶ID (選填)">
+                            <label>會員編號</label>
+                            <input type="text" id="create-user-id" placeholder="系統會員ID (選填)">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field full-width">
                             <label>支付地址/帳號</label>
-                            <input type="text" id="create-address" placeholder="帳戶地址、銀行帳號或卡號 (選填)">
+                            <input type="text" id="create-address" placeholder="錢包地址、銀行帳號或卡號 (選填)">
                         </div>
                     </div>
 
@@ -1889,8 +1885,8 @@
 
         function handleProcess(paymentId) {
             const mockData = {
-                '520103': { orderNo: '520103', orderType: '充值', status: '待處理', account: 'test0001', userId: '10000190', amount: '5.400000 USDT', address: 'THr9o49JbTB5hCWYPLT5uBJ3hQDYNRATuo', txid: 'aee3ca089420559a1d4f7262791668f2bc39efdcc973ce03340549f491232855' },
-                '520104': { orderNo: '520104', orderType: '提款', status: '待處理', account: 'testnorman', userId: '10000191', amount: '20.00 USD', address: 'VISA **** 1234', txid: 'bff4db190531066b2e5g8373892779g3cd40fgeedd084df' }
+                '520103': { orderNo: '520103', orderType: '充值', status: '待處理', account: 'member004', userId: '10000190', amount: '5.40 USDT', address: 'THr9o49JbTB5hCWYPLT5uBJ3hQDYNRATuo', txid: 'aee3ca089420559a1d4f7262791668f2bc39efdcc973ce03340549f491232855' },
+                '520104': { orderNo: '520104', orderType: '提款', status: '待處理', account: 'member001', userId: '10000191', amount: '20.00 USD', address: 'VISA **** 1234', txid: 'bff4db190531066b2e5g8373892779g3cd40fgeedd084df' }
             };
             const data = mockData[paymentId] || mockData['520103'];
             document.getElementById('modalOrderNo').textContent = data.orderNo;
@@ -1906,8 +1902,8 @@
 
         function handleDetail(paymentId) {
             const mockData = {
-                '520105': { orderNo: '520105', orderType: '提款', status: '已補單', account: 'Zombie01A03', userId: '10000192', amount: '15,000.00 JPY', address: '大阪銀行 6228-4800-1234', txid: 'cgg5ec201642177c3f6h9484903880h4de51ghffee195eg', processor: 'Admin_Zhang', processTime: '2025-12-26 15:15:30', remark: '人工核實後補單' },
-                '520106': { orderNo: '520106', orderType: '充值', status: '已退款', account: 'Zombie01A03', userId: '10000192', amount: '500.00 USDT', address: '0x8f3Cf7ad23Cd3735AFf958023239c6A063', txid: 'dff4dc201642177c3f6h9484903880h4de51ghffee195eg', processor: 'Admin_Li', processTime: '2025-12-26 14:20:15', remark: '使用者重複付款,已退款' }
+                '520105': { orderNo: '520105', orderType: '充值', status: '已補單', account: 'member002', userId: '10000192', amount: '15,000.00 JPY', address: '大阪銀行 6228-4800-1234', txid: 'cgg5ec201642177c3f6h9484903880h4de51ghffee195eg', processor: '審核員A', processTime: '2025-08-11 15:15:30', remark: '人工核實後補單' },
+                '520106': { orderNo: '520106', orderType: '充值', status: '已退款', account: 'member002', userId: '10000192', amount: '500.00 USDT', address: '0x8f3Cf7ad23Cd3735AFf958023239c6A063', txid: 'dff4dc201642177c3f6h9484903880h4de51ghffee195eg', processor: '審核員C', processTime: '2025-08-11 14:20:15', remark: '會員重複付款,已退款' }
             };
             const data = mockData[paymentId] || mockData['520105'];
             
@@ -2172,10 +2168,10 @@
                 '520104': { 
                     paymentId: '520104',
                     orderNo: '520104', 
-                    playerAccount: 'testnorman',
+                    playerAccount: 'member001',
                     paymentType: '提款', 
-                    paymentMethod: '銀行轉賬',
-                    paymentChannel: 'payment2',
+                    paymentMethod: '銀行轉帳',
+                    paymentChannel: '支付商B',
                     currency: 'USD',
                     amount: '20.00',
                     userId: '10000191',

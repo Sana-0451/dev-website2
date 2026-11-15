@@ -229,7 +229,7 @@
             max-height: 800px;
         }
 
-        /* 用戶基本資訊 */
+        /* 會員基本資訊 */
         .user-info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -621,10 +621,10 @@
         <div class="search-section">
             <div class="search-row">
                 <div class="search-item-with-tip">
-                    <label class="search-label">用戶編號：</label>
-                    <input type="text" id="searchUserNumber" class="search-input" placeholder="請輸入用戶編號">
+                    <label class="search-label">會員編號：</label>
+                    <input type="text" id="searchUserNumber" class="search-input" placeholder="請輸入會員編號">
                     <div class="tip-icon">
-                        <div class="tooltip">可在個人帳戶>帳戶管理的"用戶編號"查詢</div>
+                        <div class="tooltip">可在個人帳戶>帳戶管理的"會員編號"查詢</div>
                     </div>
                 </div>
             </div>
@@ -634,7 +634,7 @@
             </div>
         </div>
 
-        <!-- 用戶基本資訊 -->
+        <!-- 會員基本資訊 -->
         <div class="info-section">
             <div class="info-header" onclick="toggleSection('userInfo')">
                 <div class="info-title">
@@ -647,12 +647,12 @@
                 <div class="user-info-grid">
                     <div class="info-column">
                         <div class="info-item">
-                            <span class="info-label">用戶帳號</span>
-                            <span class="info-value">user123456</span>
+                            <span class="info-label">會員帳號</span>
+                            <span class="info-value">member001</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">用戶標籤</span>
-                            <span class="info-value"><span class="info-tag">新用戶</span></span>
+                            <span class="info-label">會員標籤</span>
+                            <span class="info-value"><span class="info-tag">新會員</span></span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">幣種</span>
@@ -660,11 +660,11 @@
                         </div>
                         <div class="info-item">
                             <span class="info-label">帳戶餘額</span>
-                            <span class="info-value">12,345,678.00</span>
+                            <span class="info-value">1,250,000.00</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">提款金額</span>
-                            <span class="info-value">12,345,678.00</span>
+                            <span class="info-label">待審提款金額</span>
+                            <span class="info-value">50,000.00</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">上級部門</span>
@@ -672,7 +672,7 @@
                         </div>
                         <div class="info-item">
                             <span class="info-label">註冊時間</span>
-                            <span class="info-value">2024-12-15 10:30:25</span>
+                            <span class="info-value">2025-08-20 10:30:25</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">最後登入IP</span>
@@ -690,28 +690,19 @@
                     <div class="info-column">
                         <div class="info-item">
                             <span class="info-label">本日充值次數</span>
-                            <span class="info-value">50</span>
+                            <span class="info-value">2</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">本日提款次數</span>
-                            <span class="info-value">50</span>
+                            <span class="info-value">2</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">本日充值金額</span>
-                            <span class="info-value">6,000.00</span>
+                            <span class="info-value">150,000.00</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">本日提款金額</span>
-                            <span class="info-value">123,000.00</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">
-                                本日總輸贏(GGR)
-                                <div class="tip-icon">
-                                    <div class="tooltip">本日總打碼 - 本日總派彩，負值為用戶盈利</div>
-                                </div>
-                            </span>
-                            <span class="info-value">1,000,000.00</span>
+                            <span class="info-value">110,000.00</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">
@@ -720,7 +711,7 @@
                                     <div class="tooltip">本日總充值 - 本日總提款</div>
                                 </div>
                             </span>
-                            <span class="info-value info-highlight">50,000.00</span>
+                            <span class="info-value info-highlight">40,000.00</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">本月充值金額</span>
@@ -728,16 +719,7 @@
                         </div>
                         <div class="info-item">
                             <span class="info-label">本月提款金額</span>
-                            <span class="info-value">2,000.00</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">
-                                本月總輸贏(GGR)
-                                <div class="tip-icon">
-                                    <div class="tooltip">本月總打碼 - 本月總派彩，負值為用戶盈利</div>
-                                </div>
-                            </span>
-                            <span class="info-value">33,333.00</span>
+                            <span class="info-value">250,000.00</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">
@@ -746,7 +728,7 @@
                                     <div class="tooltip">本月總充值 - 本月總提款</div>
                                 </div>
                             </span>
-                            <span class="info-value info-highlight">2,000.00</span>
+                            <span class="info-value info-highlight">750,000.00</span>
                         </div>
                     </div>
                 </div>
@@ -799,8 +781,8 @@
                                 <td>銀行</td>
                                 <td>JPY</td>
                                 <td class="amount deposit-amount">100,000.00</td>
-                                <td>2025-01-15 14:30:25</td>
-                                <td>2025-01-15 14:35:10</td>
+                                <td>2025-08-25 14:30:25</td>
+                                <td>2025-08-25 14:35:10</td>
                                 <td><span class="status-tag status-completed">已完成</span></td>
                             </tr>
                             <tr>
@@ -808,16 +790,16 @@
                                 <td>虛擬貨幣</td>
                                 <td>JPY</td>
                                 <td class="amount deposit-amount">50,000.00</td>
-                                <td>2025-01-15 13:20:15</td>
-                                <td>2025-01-15 13:25:30</td>
+                                <td>2025-08-25 13:20:15</td>
+                                <td>2025-08-25 13:25:30</td>
                                 <td><span class="status-tag status-completed">已完成</span></td>
                             </tr>
                             <tr>
                                 <td><a href="#" class="link-style">123458</a></td>
-                                <td>支付寶</td>
+                                <td>信用卡</td>
                                 <td>JPY</td>
                                 <td class="amount deposit-amount">25,000.00</td>
-                                <td>2025-01-15 12:10:05</td>
+                                <td>2025-08-25 12:10:05</td>
                                 <td>-</td>
                                 <td><span class="status-tag status-processing">處理中</span></td>
                             </tr>
@@ -826,8 +808,8 @@
                                 <td>銀行</td>
                                 <td>JPY</td>
                                 <td class="amount deposit-amount">75,000.00</td>
-                                <td>2025-01-15 11:45:20</td>
-                                <td>2025-01-15 12:10:05</td>
+                                <td>2025-08-25 11:45:20</td>
+                                <td>2025-08-25 12:10:05</td>
                                 <td><span class="status-tag status-failed">失敗</span></td>
                             </tr>
                         </tbody>
@@ -885,8 +867,8 @@
                                 <td>銀行</td>
                                 <td>JPY</td>
                                 <td class="amount withdraw-amount">80,000.00</td>
-                                <td>2025-01-15 16:20:15</td>
-                                <td>2025-01-15 16:35:45</td>
+                                <td>2025-08-25 16:20:15</td>
+                                <td>2025-08-25 16:35:45</td>
                                 <td><span class="status-tag status-completed">已完成</span></td>
                             </tr>
                             <tr>
@@ -894,8 +876,8 @@
                                 <td>虛擬貨幣</td>
                                 <td>JPY</td>
                                 <td class="amount withdraw-amount">30,000.00</td>
-                                <td>2025-01-15 15:10:30</td>
-                                <td>2025-01-15 15:25:12</td>
+                                <td>2025-08-25 15:10:30</td>
+                                <td>2025-08-25 15:25:12</td>
                                 <td><span class="status-tag status-completed">已完成</span></td>
                             </tr>
                             <tr>
@@ -903,17 +885,17 @@
                                 <td>銀行</td>
                                 <td>JPY</td>
                                 <td class="amount withdraw-amount">50,000.00</td>
-                                <td>2025-01-15 14:45:20</td>
+                                <td>2025-08-25 14:45:20</td>
                                 <td>-</td>
                                 <td><span class="status-tag status-processing">處理中</span></td>
                             </tr>
                             <tr>
                                 <td><a href="#" class="link-style">234570</a></td>
-                                <td>支付寶</td>
+                                <td>信用卡</td>
                                 <td>JPY</td>
                                 <td class="amount withdraw-amount">25,000.00</td>
-                                <td>2025-01-15 13:30:08</td>
-                                <td>2025-01-15 14:45:20</td>
+                                <td>2025-08-25 13:30:08</td>
+                                <td>2025-08-25 14:45:20</td>
                                 <td><span class="status-tag status-failed">失敗</span></td>
                             </tr>
                         </tbody>
@@ -925,89 +907,7 @@
             </div>
         </div>
 
-        <!-- 遊戲資訊 -->
-        <div class="info-section">
-            <div class="info-header" onclick="toggleSection('gameInfo')">
-                <div class="info-title">
-                    <span class="info-icon game-info-icon">🎮</span>
-                    <span>遊戲資訊</span>
-                </div>
-                <span class="collapse-arrow" id="gameInfoArrow">▲</span>
-            </div>
-            <div class="info-content expanded" id="gameInfoContent">
-                <div class="table-section">
-                    <div class="date-range-container">
-                        <div class="date-input-group">
-                            <input type="date" class="date-input" value="2025-08-25">
-                            <span class="date-separator">至</span>
-                            <input type="date" class="date-input" value="2025-08-25">
-                        </div>
-                        <div style="display: flex; gap: 8px;">
-                            <button class="btn btn-primary" onclick="searchGames()">🔍 搜索</button>
-                            <button class="btn btn-secondary" onclick="resetSearch()">重置</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-container">
-                    <div style="display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-bottom: 16px;">
-                        <button class="export-btn" onclick="exportData('games')">導出</button>
-                        <button class="export-btn" onclick="columnSettings('game')">列設置</button>
-                    </div>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>日期</th>
-                                <th>遊戲商</th>
-                                <th>幣種</th>
-                                <th>打碼</th>
-                                <th>玩家輸贏</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2025-01-15</td>
-                                <td style="color: #9c27b0; font-weight: 500;">Evolution</td>
-                                <td>JPY</td>
-                                <td class="amount game-turnover">150,000.00</td>
-                                <td class="amount player-win">+12,500.00</td>
-                            </tr>
-                            <tr>
-                                <td>2025-01-15</td>
-                                <td style="color: #9c27b0; font-weight: 500;">Pragmatic Play</td>
-                                <td>JPY</td>
-                                <td class="amount game-turnover">85,000.00</td>
-                                <td class="amount player-lose">-8,200.00</td>
-                            </tr>
-                            <tr>
-                                <td>2025-01-15</td>
-                                <td style="color: #9c27b0; font-weight: 500;">NetEnt</td>
-                                <td>JPY</td>
-                                <td class="amount game-turnover">120,000.00</td>
-                                <td class="amount player-win">+15,800.00</td>
-                            </tr>
-                            <tr>
-                                <td>2025-01-15</td>
-                                <td style="color: #9c27b0; font-weight: 500;">Microgaming</td>
-                                <td>JPY</td>
-                                <td class="amount game-turnover">95,000.00</td>
-                                <td class="amount player-lose">-3,400.00</td>
-                            </tr>
-                            <tr>
-                                <td>2025-01-15</td>
-                                <td style="color: #9c27b0; font-weight: 500;">Play'n GO</td>
-                                <td>JPY</td>
-                                <td class="amount game-turnover">200,000.00</td>
-                                <td class="amount player-win">+25,600.00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-summary">
-                    共 5 筆資料，超過10筆建議下載查看
-                </div>
-            </div>
-        </div>
-
+        
         <!-- 系統說明 -->
         <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 20px;">
             
@@ -1023,11 +923,11 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="font-weight: 600;">用戶查詢</td>
+                                <td style="font-weight: 600;">會員查詢</td>
                                 <td style="text-align: left;">
                                     介面預設資料為空。<br>
-                                    需輸入用戶編號搜尋，才會出現該用戶資料。<br>
-                                    只輸入用戶編號但沒有按搜尋，不會改變頁面資料。
+                                    需輸入會員編號搜尋，才會出現該會員資料。<br>
+                                    只輸入會員編號但沒有按搜尋，不會改變頁面資料。
                                 </td>
                             </tr>
                             <tr>
@@ -1035,7 +935,7 @@
                                 <td style="text-align: left;">
                                     預設搜尋時間為今天。<br>
                                     個別模塊可使用各自的時間搜尋範圍，不影響其他模塊資料呈現。<br>
-                                    但如果使用最上方的用戶編號搜尋，則搜尋時間強制為今天。
+                                    但如果使用最上方的會員編號搜尋，則搜尋時間強制為今天。
                                 </td>
                             </tr>
                         </tbody>
@@ -1047,7 +947,7 @@
                 <h3 style="background: #f8f9fa; margin: 0; padding: 16px 20px; font-size: 16px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8;">搜索功能列</h3>
                 <div class="info-notice" style="background: #f0f9ff; border: 1px solid #b3d8ff; border-radius: 4px; padding: 12px; margin: 20px; font-size: 13px; color: #1565c0;">
                     <strong>重要提醒：</strong><br>
-                    一進入畫面沒有資料，需輸入用戶編號搜尋。<br>
+                    一進入畫面沒有資料，需輸入會員編號搜尋。<br>
                     重置會清空所有搜尋條件。
                 </div>
                 <div class="table-container">
@@ -1061,8 +961,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="font-weight: 600;">用戶編號</td>
-                                <td style="text-align: left;">輸入用戶編號進行搜尋<br>預設無資料</td>
+                                <td style="font-weight: 600;">會員編號</td>
+                                <td style="text-align: left;">輸入會員編號進行搜尋<br>預設無資料</td>
                                 <td>輸入框，非必填<br>精準搜尋</td>
                             </tr>
                             <tr>
@@ -1081,10 +981,10 @@
             </div>
 
             <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden;">
-                <h3 style="background: #f8f9fa; margin: 0; padding: 16px 20px; font-size: 16px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8;">用戶基本資訊功能</h3>
+                <h3 style="background: #f8f9fa; margin: 0; padding: 16px 20px; font-size: 16px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8;">會員基本資訊功能</h3>
                 <div class="info-notice" style="background: #f0f9ff; border: 1px solid #b3d8ff; border-radius: 4px; padding: 12px; margin: 20px; font-size: 13px; color: #1565c0;">
                     <strong>功能說明：</strong><br>
-                    集中展示用戶的核心資訊和統計數據。<br>
+                    集中展示會員的核心資訊和統計數據。<br>
                     僅展示作用，無任何功能。
                 </div>
                 <div class="table-container">
@@ -1097,26 +997,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td style="font-weight: 600;">用戶帳號</td><td style="text-align: left;">顯示用戶帳號</td><td>文字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">用戶標籤</td><td style="text-align: left;">顯示用戶當前設定標籤</td><td>tag顯示</td></tr>
-                            <tr><td style="font-weight: 600;">幣種</td><td style="text-align: left;">顯示用戶使用的幣種</td><td>文字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">帳戶餘額</td><td style="text-align: left;">顯示用戶當前的帳戶餘額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">待審提款金額</td><td style="text-align: left;">顯示用戶當前申請的提款金額<br>如有多筆，則顯示加總值</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">上級代理</td><td style="text-align: left;">顯示用戶的上級代理帳號</td><td>文字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">註冊時間</td><td style="text-align: left;">顯示用戶註冊帳號的時間<br>例：2024-05-31 00:00</td><td>時間格式</td></tr>
-                            <tr><td style="font-weight: 600;">最後登入IP</td><td style="text-align: left;">顯示用戶最近一次登入的IP資訊</td><td>數字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">最後登入時間</td><td style="text-align: left;">顯示用戶最近一次登入的時間<br>例：2024-05-31 00:00</td><td>時間格式</td></tr>
-                            <tr><td style="font-weight: 600;">最後登入設備</td><td style="text-align: left;">顯示用戶最近一次登入時使用的設備(不一定抓得到)</td><td>文字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">本日充值次數</td><td style="text-align: left;">顯示用戶今日成功充值的筆數</td><td>數字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">本日提款次數</td><td style="text-align: left;">顯示用戶今日成功提款的筆數</td><td>數字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">本日充值金額</td><td style="text-align: left;">顯示用戶今日成功充值的總金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">本日提款金額</td><td style="text-align: left;">顯示用戶今日成功提款的總金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">本日總輸贏(GGR)</td><td style="text-align: left;">顯示用戶今日玩遊戲的總輸贏<br>附帶提示icon：本日總打碼 - 本日總派彩，負值為用戶盈利</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">本日充提差</td><td style="text-align: left;">顯示用戶今日成功充值和提款的差額<br>附帶提示icon：本日總充值 - 本日總提款</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">本月充值金額</td><td style="text-align: left;">顯示用戶本月成功充值的總金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">本月提款金額</td><td style="text-align: left;">顯示用戶本月成功提款的總金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">本月總輸贏(GGR)</td><td style="text-align: left;">顯示用戶本月玩遊戲的總輸贏<br>附帶提示icon：本月總打碼 - 本月總派彩，負值為用戶盈利</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">本月充提差</td><td style="text-align: left;">顯示用戶本月成功充值和提款的差額<br>附帶提示icon：本月總充值 - 本月總提款</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
+                            <tr><td style="font-weight: 600;">會員帳號</td><td style="text-align: left;">顯示會員帳號</td><td>文字顯示</td></tr>
+                            <tr><td style="font-weight: 600;">會員標籤</td><td style="text-align: left;">顯示會員當前設定標籤</td><td>tag顯示</td></tr>
+                            <tr><td style="font-weight: 600;">幣種</td><td style="text-align: left;">顯示會員使用的幣種</td><td>文字顯示</td></tr>
+                            <tr><td style="font-weight: 600;">帳戶餘額</td><td style="text-align: left;">顯示會員當前的帳戶餘額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
+                            <tr><td style="font-weight: 600;">待審提款金額</td><td style="text-align: left;">顯示會員當前申請的提款金額<br>如有多筆，則顯示加總值</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
+                            <tr><td style="font-weight: 600;">上級部門</td><td style="text-align: left;">顯示會員的上級部門</td><td>文字顯示</td></tr>
+                            <tr><td style="font-weight: 600;">註冊時間</td><td style="text-align: left;">顯示會員註冊帳號的時間<br>例：2024-05-31 00:00</td><td>時間格式</td></tr>
+                            <tr><td style="font-weight: 600;">最後登入IP</td><td style="text-align: left;">顯示會員最近一次登入的IP資訊</td><td>數字顯示</td></tr>
+                            <tr><td style="font-weight: 600;">最後登入時間</td><td style="text-align: left;">顯示會員最近一次登入的時間<br>例：2024-05-31 00:00</td><td>時間格式</td></tr>
+                            <tr><td style="font-weight: 600;">最後登入設備</td><td style="text-align: left;">顯示會員最近一次登入時使用的設備(不一定抓得到)</td><td>文字顯示</td></tr>
+                            <tr><td style="font-weight: 600;">本日充值次數</td><td style="text-align: left;">顯示會員今日成功充值的筆數</td><td>數字顯示</td></tr>
+                            <tr><td style="font-weight: 600;">本日提款次數</td><td style="text-align: left;">顯示會員今日成功提款的筆數</td><td>數字顯示</td></tr>
+                            <tr><td style="font-weight: 600;">本日充值金額</td><td style="text-align: left;">顯示會員今日成功充值的總金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
+                            <tr><td style="font-weight: 600;">本日提款金額</td><td style="text-align: left;">顯示會員今日成功提款的總金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
+                            <tr><td style="font-weight: 600;">本日充提差</td><td style="text-align: left;">顯示會員今日成功充值和提款的差額<br>附帶提示icon：本日總充值 - 本日總提款</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
+                            <tr><td style="font-weight: 600;">本月充值金額</td><td style="text-align: left;">顯示會員本月成功充值的總金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
+                            <tr><td style="font-weight: 600;">本月提款金額</td><td style="text-align: left;">顯示會員本月成功提款的總金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
+                            <tr><td style="font-weight: 600;">本月充提差</td><td style="text-align: left;">顯示會員本月成功充值和提款的差額<br>附帶提示icon：本月總充值 - 本月總提款</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -1126,7 +1024,7 @@
                 <h3 style="background: #f8f9fa; margin: 0; padding: 16px 20px; font-size: 16px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8;">充值資訊功能</h3>
                 <div class="info-notice" style="background: #f0f9ff; border: 1px solid #b3d8ff; border-radius: 4px; padding: 12px; margin: 20px; font-size: 13px; color: #1565c0;">
                     <strong>功能說明：</strong><br>
-                    顯示用戶的充值交易記錄，支持日期範圍篩選和資料導出。<br>
+                    顯示會員的充值交易記錄，支持日期範圍篩選和資料導出。<br>
                     系統預設展開充值資訊區塊，點擊標題可收折。<br>
                     <strong style="color: #f56c6c;">注意：導出功能依據該模塊選擇的日期範圍。</strong>
                 </div>
@@ -1158,8 +1056,8 @@
                 <h3 style="background: #f8f9fa; margin: 0; padding: 16px 20px; font-size: 16px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8;">提款資訊功能</h3>
                 <div class="info-notice" style="background: #f0f9ff; border: 1px solid #b3d8ff; border-radius: 4px; padding: 12px; margin: 20px; font-size: 13px; color: #1565c0;">
                     <strong>功能說明：</strong><br>
-                    顯示用戶的提款交易記錄，功能結構與充值資訊相同，支持日期範圍篩選和資料導出。<br>
-                    系統預設展開充值資訊區塊，點擊標題可收折。<br>
+                    顯示會員的提款交易記錄，功能結構與充值資訊相同，支持日期範圍篩選和資料導出。<br>
+                    系統預設展開提款資訊區塊，點擊標題可收折。<br>
                     <strong style="color: #f56c6c;">注意：導出功能依據該模塊選擇的日期範圍。</strong>
                 </div>
                 <div class="table-container">
@@ -1181,38 +1079,6 @@
                             <tr><td style="font-weight: 600;">金額</td><td style="text-align: left;">顯示該筆提款的金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
                             <tr><td style="font-weight: 600;">申請時間</td><td style="text-align: left;">顯示該筆提款的申請時間<br>例：2024-05-31 00:00</td><td>時間格式</td></tr>
                             <tr><td style="font-weight: 600;">完成時間</td><td style="text-align: left;">顯示該筆提款的最後更新時間<br>例：2024-05-31 00:00</td><td>時間格式</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden;">
-                <h3 style="background: #f8f9fa; margin: 0; padding: 16px 20px; font-size: 16px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8;">遊戲資訊功能</h3>
-                <div class="info-notice" style="background: #f0f9ff; border: 1px solid #b3d8ff; border-radius: 4px; padding: 12px; margin: 20px; font-size: 13px; color: #1565c0;">
-                    <strong>功能說明：</strong><br>
-                    顯示用戶的遊戲投注記錄和輸贏情況。<br>
-                    按每日遊戲商分類統計，有記錄才顯示。<br>
-                    系統預設展開充值資訊區塊，點擊標題可收折。<br>
-                    <strong style="color: #f56c6c;">注意：導出功能依據該模塊選擇的日期範圍。</strong>
-                </div>
-                <div class="table-container">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th width="15%">功能/欄位</th>
-                                <th width="60%">內容說明</th>
-                                <th width="25%">顯示模式</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td style="font-weight: 600;">日期篩選</td><td style="text-align: left;">選擇開始和結束日期來篩選遊戲記錄<br>預設顯示今天</td><td>時間選擇器</td></tr>
-                            <tr><td style="font-weight: 600;">搜索按鈕</td><td style="text-align: left;">根據選定的日期範圍篩選遊戲記錄</td><td>「搜尋」按鈕</td></tr>
-                            <tr><td style="font-weight: 600;">導出按鈕</td><td style="text-align: left;">將篩選後的遊戲記錄導出為文件</td><td>「導出」按鈕</td></tr>
-                            <tr><td style="font-weight: 600;">時間</td><td style="text-align: left;">按每日日期顯示<br>例：2024-05-31</td><td>時間格式</td></tr>
-                            <tr><td style="font-weight: 600;">遊戲商</td><td style="text-align: left;">顯示遊戲商名稱</td><td>文字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">幣種</td><td style="text-align: left;">顯示該遊戲紀錄的幣種</td><td>文字顯示</td></tr>
-                            <tr><td style="font-weight: 600;">打碼</td><td style="text-align: left;">顯示玩家於該遊戲商的總投注金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
-                            <tr><td style="font-weight: 600;">用戶輸贏</td><td style="text-align: left;">顯示玩家於該遊戲商的總輸贏金額</td><td>數字顯示<br>最多小數點2位，需補0</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -1350,14 +1216,14 @@
             }
         }
 
-        // 搜尋用戶
+        // 搜尋會員
         function searchUser() {
             const userNumber = document.getElementById('searchUserNumber').value;
             if (!userNumber.trim()) {
-                showNotification('請輸入用戶編號', 'info');
+                showNotification('請輸入會員編號', 'info');
                 return;
             }
-            showNotification(`正在搜尋用戶編號：${userNumber}`, 'success');
+            showNotification(`正在搜尋會員編號：${userNumber}`, 'success');
         }
 
         // 重置搜尋
@@ -1374,11 +1240,6 @@
         // 搜尋提款記錄
         function searchWithdraws() {
             showNotification('正在搜尋提款記錄...', 'success');
-        }
-
-        // 搜尋遊戲記錄
-        function searchGames() {
-            showNotification('正在搜尋遊戲記錄...', 'success');
         }
 
         // 列設置功能
@@ -1401,13 +1262,6 @@
                 { name: '申請時間', key: 'create_time', checked: true },
                 { name: '完成時間', key: 'finish_time', checked: true },
                 { name: '狀態', key: 'status', checked: true }
-            ],
-            game: [
-                { name: '日期', key: 'date', checked: true, disabled: true },
-                { name: '遊戲商', key: 'provider', checked: true },
-                { name: '幣種', key: 'currency', checked: true },
-                { name: '打碼', key: 'turnover', checked: true },
-                { name: '玩家輸贏', key: 'win_lose', checked: true }
             ]
         };
 
@@ -1524,8 +1378,7 @@
         function exportData(type) {
             const typeNames = {
                 'deposits': '充值',
-                'withdraws': '提款',
-                'games': '遊戲'
+                'withdraws': '提款'
             };
             showNotification(`${typeNames[type]}資訊導出中...`, 'success');
             
